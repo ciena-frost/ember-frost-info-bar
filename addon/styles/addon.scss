@@ -1,1 +1,42 @@
 @import 'node_modules/ember-frost-theme/scss/frost-theme';
+@import 'node_modules/ember-frost-css-core/scss/frost-core';
+
+.frost-info-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 90px;
+
+  border-bottom: 1px solid $frost-color-lgrey-1;
+
+  background-color: $frost-color-white;
+
+  .title {
+    margin-left: 30px;
+
+    .primary-title {
+      margin: 25px 0 10px 0;
+      font-size: $frost-font-xl;
+      color: $frost-color-night-1;
+    }
+
+    .sub-title {
+      margin-bottom: 20px;
+      font-size: $frost-font-m;
+      color: $frost-color-grey-5;
+    }
+  }
+
+  .action {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+
+.frost-info-bar .center {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+}
