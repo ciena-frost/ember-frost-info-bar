@@ -1,15 +1,15 @@
-ember-frost-info-bar testbed
-<div class="ember-frost-info-bar">
-    <div class="title">
-        <div class="primary-title">User accounts</div>
-        <div class="sub-title">View and manage user accounts</div>
-    </div>
-    <div class="action">
-      {{#frost-button on-click=(action 'createUser')}}
-        <div class='icon-action'>
-          {{frost-svg path='frost/infobar-create'}}
-          <div class='text'>Create</div>
-        </div>
-       {{/frost-button}}
-    </div>
+ember-frost-info-bar testbed <br>
+<div class="frost-info-bar">
+  <div class="title">
+    <div class="primary-title">User accounts</div>
+    <div class="sub-title">View and manage user accounts</div>
+  </div>
+  <div class="action">
+    {{#frost-button}}
+      <div class='icon-action'>
+        {{frost-icon icon='frost/infobar-create'}}
+        <div class='text'>Create</div>
+      </div>
+     {{/frost-button}}
+  </div>
 </div>

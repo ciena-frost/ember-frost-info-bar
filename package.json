@@ -53,7 +53,9 @@
     "ember-cli-htmlbars": "^1.0.1",
     "ember-cli-sass": "^5.1.0",
     "ember-frost-theme": "^1.0.0",
+    "ember-frost-button": "^1.0.0",
     "ember-frost-css-core": "^0.2.1",
+    "ember-frost-icons": "^1.0.1",
     "liquid-fire": "^0.22.0"
   },
   "ember-addon": {
