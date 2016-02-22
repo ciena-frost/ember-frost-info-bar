@@ -9,6 +9,11 @@
 
 # ember-frost-info-bar <br /> [![Travis][ci-img]][ci-url] [![Coveralls][cov-img]][cov-url] [![NPM][npm-img]][npm-url]
 
+## Installation
+```
+ember install ember-frost-info-bar
+```
+
 ## API
 
 Coming soon
