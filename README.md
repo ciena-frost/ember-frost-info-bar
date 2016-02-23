@@ -14,9 +14,25 @@
 ember install ember-frost-info-bar
 ```
 
-## API
-
-Coming soon
+## Examples
+```handlebars
+<div class='frost-info-bar'>
+    <div class='title'>
+        <div class='primary-title'>User accounts</div>
+        <div class='sub-title'>View and manage user accounts</div>
+    </div>
+    <div class='action'>
+    {{frost-button
+      on-click=(action 'createUser')
+      priority="tertiary"
+      size="medium"
+      icon="frost/infobar-create"
+      text="Create"
+      vertical=true
+    }}
+    </div>
+</div>
+```
 
 ## Development
 ### Setup
