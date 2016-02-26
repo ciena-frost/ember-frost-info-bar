@@ -4,6 +4,7 @@
 .frost-info-bar {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   height: 90px;
 
@@ -34,7 +35,6 @@
 }
 
 .frost-info-bar .center {
-  height: 100%;
   display: flex;
   flex: 1;
   flex-direction: row;
