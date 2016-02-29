@@ -2,6 +2,7 @@
   "name": "ember-frost-info-bar",
   "version": "1.0.3",
   "description": "",
+  "frostGuideDirectory": "ui-components/content-views/info-bar",
   "directories": {
     "doc": "doc",
     "test": "tests"
