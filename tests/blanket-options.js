@@ -7,8 +7,14 @@ var options = {
   loaderExclusions: [],
   enableCoverage: true,
   cliOptions: {
-    reporters: ['teamcity'],
-    autostart: true
+    reporters: ['lcov'],
+    autostart: true,
+    lcovOptions: {
+      outputFile: 'coverage/lcov.info',
+      renamer: function (fileName) {
+        return fileName.replace('ember-frost-info-bar', 'addon') + '.js'
+      }
+    }
   }
 }
 
