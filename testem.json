@@ -1,12 +1,12 @@
 {
   "framework": "mocha",
-  "test_page": "tests/index.html?coverage&hidepassed",
+  "test_page": "tests/index.html?hidepassed&coverage",
   "disable_watching": true,
   "launch_in_ci": [
-  "Firefox"
+    "Firefox"
   ],
   "launch_in_dev": [
-  "PhantomJS",
-  "Chrome"
+    "Firefox",
+    "Chrome"
   ]
 }
