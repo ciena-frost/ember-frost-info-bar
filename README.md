@@ -23,7 +23,7 @@ ember install ember-frost-info-bar
     </div>
     <div class='action'>
     {{frost-button
-      on-click=(action 'createUser')
+      onClick=(action 'createUser')
       priority="tertiary"
       size="medium"
       icon="frost/infobar-create"
