@@ -1,38 +1,34 @@
 @import 'node_modules/ember-frost-core/addon/styles/frost-theme';
-$infobarHeight: 80px;
-$infobarBorder: 1px;
+$info-bar-height: 80px;
+$info-bar-border-width: 1px;
+$info-bar-padding-left-right: 30px;
+$info-bar-padding-top-bottom: 20px;
+$info-bar-title-margin-bottom: 8px;
 
 .frost-info-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: $infobarHeight + $infobarBorder;
+  height: $info-bar-height + $info-bar-border-width;
   box-sizing: border-box;
-  border-bottom: $infobarBorder solid $frost-color-lgrey-1;
+  border-bottom: $info-bar-border-width solid $frost-color-lgrey-1;
   background-color: $frost-color-white;
+  padding: $info-bar-padding-top-bottom $info-bar-padding-left-right;
 
   .title {
-    margin-left: 30px;
     line-height: 1;
 
     .primary-title {
-      margin-top: 20px;
-      margin-bottom: 8px;
+      margin-bottom: $info-bar-title-margin-bottom;
       font-size: $frost-font-m;
       color: $frost-color-night-2;
     }
 
     .sub-title {
-      margin-bottom: 20px;
       font-size: $frost-font-s;
       color: $frost-color-grey-5;
     }
-  }
-
-  .action {
-    margin-left: auto;
-    margin-right: 30px;
   }
 }
 
