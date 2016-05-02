@@ -9,7 +9,7 @@ $infobarBorder: 1px;
   align-items: center;
   height: $infobarHeight + $infobarBorder;
   box-sizing: border-box;
-  border-bottom: 1px solid $frost-color-lgrey-1;
+  border-bottom: $infobarBorder solid $frost-color-lgrey-1;
   background-color: $frost-color-white;
 
   .title {
