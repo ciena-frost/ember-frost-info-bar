@@ -1,21 +1,24 @@
 @import 'node_modules/ember-frost-core/addon/styles/frost-theme';
+$infobarHeight: 80px;
+$infobarBorder: 1px;
 
 .frost-info-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
+  height: $infobarHeight + $infobarBorder;
+  box-sizing: border-box;
   border-bottom: 1px solid $frost-color-lgrey-1;
-
   background-color: $frost-color-white;
 
   .title {
     margin-left: 30px;
-    line-height: 1.4;
+    line-height: 1;
 
     .primary-title {
-      margin-top: 25px;
+      margin-top: 20px;
+      margin-bottom: 8px;
       font-size: $frost-font-m;
       color: $frost-color-night-2;
     }
