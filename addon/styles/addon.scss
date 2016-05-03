@@ -1,7 +1,8 @@
 @import 'node_modules/ember-frost-core/addon/styles/frost-theme';
 $info-bar-height: 80px;
 $info-bar-border-width: 1px;
-$info-bar-padding-left-right: 30px;
+$info-bar-padding-left: 30px;
+$info-bar-padding-right: 0;
 $info-bar-padding-top-bottom: 20px;
 $info-bar-title-margin-bottom: 8px;
 
@@ -14,7 +15,7 @@ $info-bar-title-margin-bottom: 8px;
   box-sizing: border-box;
   border-bottom: $info-bar-border-width solid $frost-color-lgrey-1;
   background-color: $frost-color-white;
-  padding: $info-bar-padding-top-bottom $info-bar-padding-left-right;
+  padding: $info-bar-padding-top-bottom $info-bar-padding-right $info-bar-padding-top-bottom $info-bar-padding-left;
 
   .title {
     line-height: 1;
