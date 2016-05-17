@@ -15,7 +15,7 @@ ember install ember-frost-info-bar
 ```
 
 ## Examples
-### Block format
+### Block Format
 ```handlebars
 {{#frost-info-bar as |slot|}}
   {{#block-slot slot 'title'}}
@@ -31,7 +31,7 @@ ember install ember-frost-info-bar
 {{/frost-info-bar}}
 ```
 
-### HTML format
+### HTML Format
 ```handlebars
 <div class='frost-info-bar'>
     <div class='title'>
