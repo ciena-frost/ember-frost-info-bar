@@ -19,11 +19,13 @@ ember install ember-frost-info-bar
 ```handlebars
 {{#frost-info-bar as |slot|}}
   {{#block-slot slot 'title'}}
-      <div class='primary-title'>User accounts</div>
-      <div class='sub-title'>View and manage user accounts</div>
+      User accounts
   {{/block-slot}}
   {{#block-slot slot 'summary'}}
       Summary section
+  {{/block-slot}}
+  {{#block-slot slot 'context-controls'}}
+      Context controls section
   {{/block-slot}}
   {{#block-slot slot 'actions' as |action|}}
     {{action.button icon='frost/infobar-create' text='Create' onClick=(action 'createUser')}}

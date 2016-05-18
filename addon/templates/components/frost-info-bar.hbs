@@ -1,15 +1,23 @@
 {{yield}}
 
-{{#yield-slot 'title'}}
-  <div class='title'>
-    {{yield}}
-  </div>
-{{/yield-slot}}
+<div class="title">
+  {{#yield-slot 'title'}}
+      <div class='primary-title'>
+        {{yield}}
+      </div>
+  {{/yield-slot}}
 
-{{#yield-slot 'summary'}}
-  <div class="summary">
-    {{yield}}
-  </div>
+  {{#yield-slot 'summary'}}
+      <div class="sub-title">
+        {{yield}}
+      </div>
+  {{/yield-slot}}
+</div>
+
+{{#yield-slot 'context-controls'}}
+    <div class='context-controls'>
+      {{yield}}
+    </div>
 {{/yield-slot}}
 
 {{#yield-slot 'actions'}}
