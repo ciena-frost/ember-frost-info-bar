@@ -1,1 +1,31 @@
-ember-frost-info-bar component
+{{yield}}
+
+<div class="title">
+  {{#yield-slot 'title'}}
+      <div class='primary-title'>
+        {{yield}}
+      </div>
+  {{/yield-slot}}
+
+  {{#yield-slot 'summary'}}
+      <div class="sub-title">
+        {{yield}}
+      </div>
+  {{/yield-slot}}
+</div>
+
+{{#yield-slot 'context-controls'}}
+    <div class='context-controls'>
+      {{yield}}
+    </div>
+{{/yield-slot}}
+
+{{#yield-slot 'actions'}}
+    <div class='action'>
+      {{yield (block-params (hash
+        button=(component 'frost-button'
+          priority='tertiary'
+          size='medium'
+          vertical=true)))}}
+    </div>
+{{/yield-slot}}
