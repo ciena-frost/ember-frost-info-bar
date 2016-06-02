@@ -2,7 +2,7 @@
 
 <div class="title">
   {{#yield-slot 'title'}}
-      <div class='primary-title'>
+      <div class="primary-title">
         {{yield}}
       </div>
   {{/yield-slot}}
@@ -15,13 +15,13 @@
 </div>
 
 {{#yield-slot 'context-controls'}}
-    <div class='context-controls'>
+    <div class="context-controls">
       {{yield}}
     </div>
 {{/yield-slot}}
 
 {{#yield-slot 'actions'}}
-    <div class='action'>
+    <div class="action">
       {{yield (block-params (hash
         button=(component 'frost-button'
           priority='tertiary'
