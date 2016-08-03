@@ -5,18 +5,18 @@
       pack='dummy'
     }}
   {{/block-slot}}
-  {{#block-slot slot 'title'}}
+  {{#block-slot 'title'}}
     &lt;placeholder: title&gt;
   {{/block-slot}}
   {{#if summary}}
-    {{#block-slot slot 'summary'}}
+    {{#block-slot 'summary'}}
       &lt;placeholder: summary&gt;
     {{/block-slot}}
   {{/if}}
   {{#block-slot slot 'controls'}}
       &lt;placeholder: controls&gt;
   {{/block-slot}}
-  {{#block-slot slot 'actions' as |action|}}
+  {{#block-slot 'actions' as |action|}}
     {{action.button icon='frost/infobar-create' text='Create' onClick=(action 'createUser')}}
   {{/block-slot}}
 {{/frost-info-bar}}

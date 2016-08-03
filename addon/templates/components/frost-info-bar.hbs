@@ -26,16 +26,16 @@
     </div>
 {{/yield-slot}}
 
-{{#yield-slot 'actions'}}
+{{#yield-slot 'actions' (block-params
+  (hash
+    button=(component 'frost-button'
+      priority='tertiary'
+      size='small'
+      vertical=true
+    )
+  )
+)}}
     <div class='actions'>
-      {{yield (block-params
-        (hash
-          button=(component 'frost-button'
-            priority='tertiary'
-            size='small'
-            vertical=true
-          )
-        )
-      )}}
+      {{yield}}
     </div>
 {{/yield-slot}}
