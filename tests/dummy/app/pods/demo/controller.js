@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
       })
     },
 
-    toggleSummary() {
+    toggleSummary () {
       this.toggleProperty('summary')
     }
   }
