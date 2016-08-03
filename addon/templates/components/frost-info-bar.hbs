@@ -1,31 +1,41 @@
 {{yield}}
 
-<div class="title">
+{{#yield-slot 'icon'}}
+  <div class='icon'>
+    {{yield}}
+  </div>
+{{/yield-slot}}
+
+<div class='title'>
   {{#yield-slot 'title'}}
-      <div class="primary-title">
+      <div class='primary-title'>
         {{yield}}
       </div>
   {{/yield-slot}}
 
   {{#yield-slot 'summary'}}
-      <div class="sub-title">
+      <div class='sub-title'>
         {{yield}}
       </div>
   {{/yield-slot}}
 </div>
 
-{{#yield-slot 'context-controls'}}
-    <div class="context-controls">
+{{#yield-slot 'controls'}}
+    <div class='controls'>
       {{yield}}
     </div>
 {{/yield-slot}}
 
-{{#yield-slot 'actions'}}
-    <div class="action">
-      {{yield (block-params (hash
-        button=(component 'frost-button'
-          priority='tertiary'
-          size='medium'
-          vertical=true)))}}
+{{#yield-slot 'actions' (block-params
+  (hash
+    button=(component 'frost-button'
+      priority='tertiary'
+      size='small'
+      vertical=true
+    )
+  )
+)}}
+    <div class='actions'>
+      {{yield}}
     </div>
 {{/yield-slot}}

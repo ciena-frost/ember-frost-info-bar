@@ -1,14 +1,49 @@
 {{#frost-info-bar as |slot|}}
-  {{#block-slot slot 'title'}}
-      User accounts
+  {{#block-slot slot 'icon'}}
+    {{frost-icon
+      icon='bacon'
+      pack='dummy'
+    }}
   {{/block-slot}}
-  {{#block-slot slot 'summary'}}
-      Summary section
+  {{#block-slot 'title'}}
+    &lt;placeholder: title&gt;
   {{/block-slot}}
-  {{#block-slot slot 'context-controls'}}
-      Context controls section
+  {{#if summary}}
+    {{#block-slot 'summary'}}
+      &lt;placeholder: summary&gt;
+    {{/block-slot}}
+  {{/if}}
+  {{#block-slot slot 'controls'}}
+      &lt;placeholder: controls&gt;
   {{/block-slot}}
-  {{#block-slot slot 'actions' as |action|}}
+  {{#block-slot 'actions' as |action|}}
     {{action.button icon='frost/infobar-create' text='Create' onClick=(action 'createUser')}}
   {{/block-slot}}
 {{/frost-info-bar}}
+
+<div class='demo-controls'>
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='Toggle summary on/off'
+    onClick=(action 'toggleSummary')
+  }}
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='Toggle summary on/off'
+    onClick=(action 'toggleSummary')
+  }}
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='Toggle summary on/off'
+    onClick=(action 'toggleSummary')
+  }}
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='Toggle summary on/off'
+    onClick=(action 'toggleSummary')
+  }}
+</div>
