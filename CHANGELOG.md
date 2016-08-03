@@ -1,6 +1,5 @@
 # 3.0.0
-No CHANGELOG section found in Pull Request description.
-Use a `# CHANGELOG` section in your Pull Request description to auto-populate the `CHANGELOG.md`
+* **Fixed** upgrading repo to use block-slots >=1.0.0
 
 # 2.1.1
 * **Fixed** Usage of single quotes was updated to double quotes when setting a class in a div
@@ -14,4 +13,3 @@ This change is [<img src="https://reviewable.io/review_button.svg" height="35" a
 # 2.1.0
 No CHANGELOG section found in Pull Request description.
 Use a `# CHANGELOG` section in your Pull Request description to auto-populate the `CHANGELOG.md`
-
