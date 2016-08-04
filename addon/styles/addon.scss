@@ -56,6 +56,20 @@ $info-bar-title-separator: 5px;
   }
 }
 
+.frost-info-bar-icon {
+  height: 45px;
+  width: 45px;
+
+  svg {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.frost-info-bar-icon ~ .title {
+  margin-left: 15px;
+}
+
 .frost-info-bar .center {
   display: flex;
   flex: 1;

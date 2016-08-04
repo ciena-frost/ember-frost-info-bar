@@ -1,5 +1,5 @@
-{{#frost-info-bar as |slot|}}
-  {{#block-slot slot 'icon'}}
+{{#frost-info-bar}}
+  {{#block-slot 'icon'}}
     {{frost-icon
       icon='bacon'
       pack='dummy'
@@ -13,7 +13,7 @@
       &lt;placeholder: summary&gt;
     {{/block-slot}}
   {{/if}}
-  {{#block-slot slot 'controls'}}
+  {{#block-slot 'controls'}}
       &lt;placeholder: controls&gt;
   {{/block-slot}}
   {{#block-slot 'actions' as |action|}}
