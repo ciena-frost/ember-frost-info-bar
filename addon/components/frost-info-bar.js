@@ -9,10 +9,12 @@ export default Component.extend(BlockSlotMixin, PropTypeMixin, {
   layout: layout,
 
   propTypes: {
+    hook: PropTypes.string
   },
 
   getDefaultProps () {
     return {
+      hook: 'info-bar'
     }
   },
 })

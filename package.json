@@ -48,6 +48,7 @@
     "ember-export-application-global": "1.0.5",
     "ember-frost-core": ">=0.20.0 <1.0.0",
     "ember-frost-notifier": "^2.0.0",
+    "ember-hook": "1.3.1",
     "ember-load-initializers": "^0.5.1",
     "ember-lodash": "0.0.10",
     "ember-one-way-controls": "0.8.3",

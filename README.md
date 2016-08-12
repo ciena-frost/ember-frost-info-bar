@@ -42,6 +42,15 @@ Using [ember-block-slots](https://github.com/ciena-blueplanet/ember-block-slots)
 {{/frost-info-bar}}
 ```
 
+## Testing with ember-hook
+The info-bar component is accessible using ember-hook with the top level hook name or you can access the internal components as well -
+* Default top level hook - `$hook('info-bar')`
+* Icon slot hook - `$hook('<hook-name>-icon')`
+* Title slot hook - `$hook('<hook-name>-title')`
+* Summary slot hook - `$hook('<hook-name>-summary')'`
+* Controls slot hook - `$hook('<hook-name>-controls')'`
+* Actions slot - `$hook('<hook-name>-action')'`
+
 ## Development
 ### Setup
 ```
