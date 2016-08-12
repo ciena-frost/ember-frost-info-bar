@@ -16,5 +16,5 @@ export default Component.extend(BlockSlotMixin, PropTypeMixin, {
     return {
       hook: 'info-bar'
     }
-  },
+  }
 })
