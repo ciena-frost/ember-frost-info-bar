@@ -17,7 +17,11 @@
       &lt;placeholder: controls&gt;
   {{/block-slot}}
   {{#block-slot 'actions' as |action|}}
-    {{action.button icon='frost/infobar-create' text='Create' onClick=(action 'createUser')}}
+    {{action.button
+      icon='infobar-create'
+      text='Click me!'
+      onClick=(action 'triggerAction')
+    }}
   {{/block-slot}}
 {{/frost-info-bar}}
 

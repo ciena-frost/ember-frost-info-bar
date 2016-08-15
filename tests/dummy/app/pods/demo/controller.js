@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   summary: true,
 
   actions: {
-    createUser () {
+    triggerAction () {
       this.get('notifier').addNotification({
         message: 'You clicked a button!',
         type: 'success',
