@@ -19,7 +19,7 @@ const testTemplate = hbs`
       Yielded controls
     {{/block-slot}}
     {{#block-slot 'actions' as |action|}}
-      {{action.button icon='frost/infobar-create' text='Click me!'}}
+      {{action.button icon='infobar-create' text='Click me!'}}
     {{/block-slot}}
   {{/frost-info-bar}}`
 
