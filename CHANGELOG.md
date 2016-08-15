@@ -1,3 +1,14 @@
+# 3.1.1
+
+* **Updated** `ember-hook` dependency in blueprint to latest version
+* **Removed** unneeded configuration object for `ember-hook` since it will now work correctly in the development environment.
+
+<!-- Reviewable:start -->
+---
+This change is [<img src="https://reviewable.io/review_button.svg" height="34" align="absmiddle" alt="Reviewable"/>](https://reviewable.io/reviews/ciena-frost/ember-frost-info-bar/36)
+<!-- Reviewable:end -->
+
+
 # 3.1.0
 
 * **Updated** Ember, Ember-CLI and Ember data to ~2.6.0
