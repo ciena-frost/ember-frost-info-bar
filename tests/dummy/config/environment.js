@@ -11,11 +11,6 @@ module.exports = function (environment) {
         // e.g. 'with-controller': true
       }
     },
-
-    emberHook: {
-      enabled: environment === 'development' || environment === 'test'
-    },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
