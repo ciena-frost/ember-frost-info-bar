@@ -1,3 +1,4 @@
+<!-- BEGIN-SNIPPET template -->
 {{frost-info-bar
   icon-module=(component 'frost-icon'
     icon='bacon'
@@ -20,7 +21,7 @@
     onClick=(action 'triggerAction')
   )
 }}
-
+<!-- END-SNIPPET -->
 <div class='demo-controls'>
   {{frost-button
     priority='secondary'
@@ -46,4 +47,16 @@
     text='Toggle summary on/off'
     onClick=(action 'toggleSummary')
   }}
+</div>
+<div class='page-content'>
+  <div class='row'>
+    <div class='item'>
+      <h3>Controller</h3>
+      {{code-snippet name='controller.js'}}
+    </div>
+    <div class='item'>
+      <h3>Template</h3>
+      {{code-snippet name='template.hbs'}}
+    </div>
+  </div>
 </div>

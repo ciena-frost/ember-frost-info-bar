@@ -7,6 +7,7 @@ const {
   },
   get
 } = Ember
+// BEGIN-SNIPPET controller
 export default Controller.extend({
   notifier: service('notifier'),
 
@@ -21,9 +22,9 @@ export default Controller.extend({
         clearDuration: '1500'
       })
     },
-
     toggleSummary () {
       this.toggleProperty('summary')
     }
   }
 })
+// END-SNIPPET
