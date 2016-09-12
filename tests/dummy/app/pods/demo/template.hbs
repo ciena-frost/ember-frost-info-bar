@@ -1,29 +1,25 @@
-{{#frost-info-bar}}
-  {{#block-slot 'icon'}}
-    {{frost-icon
-      icon='bacon'
-      pack='dummy'
-    }}
-  {{/block-slot}}
-  {{#block-slot 'title'}}
-    &lt;placeholder: title&gt;
-  {{/block-slot}}
-  {{#if summary}}
-    {{#block-slot 'summary'}}
-      &lt;placeholder: summary&gt;
-    {{/block-slot}}
-  {{/if}}
-  {{#block-slot 'controls'}}
-      &lt;placeholder: controls&gt;
-  {{/block-slot}}
-  {{#block-slot 'actions' as |action|}}
-    {{action.button
-      icon='infobar-create'
-      text='Click me!'
-      onClick=(action 'triggerAction')
-    }}
-  {{/block-slot}}
-{{/frost-info-bar}}
+{{frost-info-bar
+  icon-module=(component 'frost-icon'
+    icon='bacon'
+    pack='dummy'
+  )
+  title-module=(component 'text-box'
+    text='&lt;placeholder: title&gt;'
+  )
+  summary-module=(component 'text-box'
+    isVisible=summary
+    text='&lt;placeholder: summary&gt;'
+  )
+  controls-module=(component 'text-box'
+    text='&lt;placeholder: controls&gt;'
+  )
+  actions-module=(component 'frost-button'
+    design='info-bar'
+    icon='infobar-create'
+    text='Click me!'
+    onClick=(action 'triggerAction')
+  )
+}}
 
 <div class='demo-controls'>
   {{frost-button

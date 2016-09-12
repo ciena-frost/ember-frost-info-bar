@@ -1,13 +1,20 @@
 import Ember from 'ember'
 
-export default Ember.Controller.extend({
-  notifier: Ember.inject.service('notifier'),
+const {
+  Controller,
+  inject: {
+    service
+  },
+  get
+} = Ember
+export default Controller.extend({
+  notifier: service('notifier'),
 
   summary: true,
 
   actions: {
     triggerAction () {
-      this.get('notifier').addNotification({
+      get(this, 'notifier').addNotification({
         message: 'You clicked a button!',
         type: 'success',
         autoClear: true,
