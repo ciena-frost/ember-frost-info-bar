@@ -1,3 +1,6 @@
+# 4.0.0
+- Switched from block-slots to `(component)` helper.
+
 # 3.1.1
 
 * **Updated** `ember-hook` dependency in blueprint to latest version
