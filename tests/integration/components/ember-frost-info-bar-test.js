@@ -14,21 +14,21 @@ const {
 
 const testTemplate = hbs`
   {{frost-info-bar hook=hook
-    icon-module=(component 'frost-icon'
+    icon=(component 'frost-icon'
       icon='bacon'
       pack='dummy'
     )
-    title-module=(component 'text-box'
+    title=(component 'text-box'
       text='&lt;placeholder: title&gt;'
     )
-    summary-module=(component 'text-box'
+    summary=(component 'text-box'
       isVisible=summary
       text='&lt;placeholder: summary&gt;'
     )
-    controls-module=(component 'text-box'
-      text='&lt;placeholder: controls&gt;'
+    scope=(component 'text-box'
+      text='&lt;placeholder: scope&gt;'
     )
-    actions-module=(component 'frost-button'
+    controls=(component 'frost-button'
       design='info-bar'
       icon='infobar-create'
       text='Click me!'
@@ -78,17 +78,17 @@ describeComponent(
       expect(text(el)).to.eql('<placeholder: summary>')
     })
 
-    it('has a hook for controls', function () {
-      const el = $hook('my-info-bar-controls')
-      expect(text(el)).to.eql('<placeholder: controls>')
+    it('has a hook for scope', function () {
+      const el = $hook('my-info-bar-scope')
+      expect(text(el)).to.eql('<placeholder: scope>')
     })
 
-    it('has a hook for actions', function () {
-      const el = $hook('my-info-bar-actions')
+    it('has a hook for controls', function () {
+      const el = $hook('my-info-bar-controls')
       expect(text(el)).to.eql('Click me!')
     })
     it('triggers action correctly', function (done) {
-      const el = $hook('my-info-bar-actions')
+      const el = $hook('my-info-bar-controls')
       el.find('button').click()
       next(() => {
         expect(spy.called).to.be.true

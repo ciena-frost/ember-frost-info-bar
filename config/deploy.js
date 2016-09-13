@@ -1,6 +1,6 @@
 /* jshint node: true */
 
-module.exports = function(deployTarget) {
+module.exports = function (deployTarget) {
   var ENV = {
     build: {}
   }
@@ -9,7 +9,7 @@ module.exports = function(deployTarget) {
     force: true
   }
     // include other plugin configuration that applies to all deploy targets here
-  ENV.build.environment = deployTarget;
+  ENV.build.environment = deployTarget
 
-  return ENV;
-};
+  return ENV
+}

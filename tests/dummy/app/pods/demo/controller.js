@@ -11,8 +11,6 @@ const {
 export default Controller.extend({
   notifier: service('notifier'),
 
-  summary: true,
-
   actions: {
     triggerAction () {
       get(this, 'notifier').addNotification({
@@ -21,9 +19,6 @@ export default Controller.extend({
         autoClear: true,
         clearDuration: '1500'
       })
-    },
-    toggleSummary () {
-      this.toggleProperty('summary')
     }
   }
 })

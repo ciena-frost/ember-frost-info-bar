@@ -1,20 +1,24 @@
 <!-- BEGIN-SNIPPET template -->
 {{frost-info-bar
-  icon-module=(component 'frost-icon'
+  icon=(component 'frost-icon'
+    isVisible=isIconVisible
     icon='bacon'
     pack='dummy'
   )
-  title-module=(component 'text-box'
+  title=(component 'text-box'
+    isVisible=isTitleVisible
     text='&lt;placeholder: title&gt;'
   )
-  summary-module=(component 'text-box'
-    isVisible=summary
+  summary=(component 'text-box'
+    isVisible=isSummaryVisible
     text='&lt;placeholder: summary&gt;'
   )
-  controls-module=(component 'text-box'
+  scope=(component 'text-box'
+    isVisible=isScopeVisible
     text='&lt;placeholder: controls&gt;'
   )
-  actions-module=(component 'frost-button'
+  controls=(component 'frost-button'
+    isVisible=isControlsVisible
     design='info-bar'
     icon='infobar-create'
     text='Click me!'
@@ -26,26 +30,32 @@
   {{frost-button
     priority='secondary'
     size='small'
-    text='Toggle summary on/off'
-    onClick=(action 'toggleSummary')
+    text='icon on/off'
+    onClick=(action (mut isIconVisible) (not isIconVisible))
   }}
   {{frost-button
     priority='secondary'
     size='small'
-    text='Toggle summary on/off'
-    onClick=(action 'toggleSummary')
+    text='title on/off'
+    onClick=(action (mut isTitleVisible) (not isTitleVisible))
   }}
   {{frost-button
     priority='secondary'
     size='small'
-    text='Toggle summary on/off'
-    onClick=(action 'toggleSummary')
+    text='summary on/off'
+    onClick=(action (mut isSummaryVisible) (not isSummaryVisible))
   }}
   {{frost-button
     priority='secondary'
     size='small'
-    text='Toggle summary on/off'
-    onClick=(action 'toggleSummary')
+    text='scope on/off'
+    onClick=(action (mut isScopeVisible) (not isScopeVisible))
+  }}
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='controls on/off'
+    onClick=(action (mut isControlsVisible) (not isControlsVisible))
   }}
 </div>
 <div class='page-content'>
