@@ -1,0 +1,79 @@
+@import 'node_modules/ember-frost-core/addon/styles/frost-theme';
+$info-bar-height: 70px;
+$info-bar-border-width: 1px;
+$info-bar-padding-left: 30px;
+$info-bar-padding-right: 0;
+$info-bar-padding-top-bottom: 20px;
+$info-bar-title-separator: 5px;
+
+.frost-info-bar {
+  align-items: center;
+  background-color: $frost-color-white;
+  border-bottom: $info-bar-border-width solid $frost-color-lgrey-1;
+  display: flex;
+  flex-direction: row;
+  height: $info-bar-height;
+  overflow: hidden;
+  padding: $info-bar-padding-top-bottom $info-bar-padding-right $info-bar-padding-top-bottom $info-bar-padding-left;
+
+  .icon {
+    height: 45px;
+    width: 45px;
+
+    svg {
+      height: 45px;
+      width: 45px;
+    }
+  }
+
+  .icon ~ .title {
+    margin-left: 15px;
+  }
+
+  .title {
+    .primary-title {
+      color: $frost-color-night-2;
+      font-size: $frost-font-m;
+    }
+
+    .primary-title ~ .sub-title {
+      margin-top: $info-bar-title-separator;
+    }
+
+    .sub-title {
+      color: $frost-color-grey-5;
+      font-size: $frost-font-s;
+    }
+  }
+
+  .controls {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .actions {
+    margin-left: auto;
+  }
+}
+
+.frost-info-bar-icon {
+  height: 45px;
+  width: 45px;
+
+  svg {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.frost-info-bar-icon ~ .title {
+  margin-left: 15px;
+}
+
+.frost-info-bar .center {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+}

@@ -1,0 +1,22 @@
+<!-- Icon -->
+<div class='frost-info-bar-icon' data-test={{hook (concat hook '-icon')}}>
+  {{component icon-module}}
+</div>
+<!-- Title -->
+<div class='title'>
+  <div class='primary-title' data-test={{hook (concat hook '-title')}}>
+    {{component title-module}}
+  </div>
+  <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
+    {{component summary-module}}
+  </div>
+</div>
+<!-- Controls -->
+<div class='controls' data-test={{hook (concat hook '-controls')}}>
+  {{component controls-module}}
+</div>
+<!-- Actions -->
+<div class='actions' data-test={{hook (concat hook '-actions')}}>
+  {{component actions-module}}
+</div>
+{{yield}}
