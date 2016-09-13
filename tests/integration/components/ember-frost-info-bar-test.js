@@ -3,25 +3,38 @@ import {$hook, initialize} from 'ember-hook'
 import {describeComponent, it} from 'ember-mocha'
 import hbs from 'htmlbars-inline-precompile'
 import {beforeEach} from 'mocha'
+import sinon from 'sinon'
+import Ember from 'ember'
+
+const {
+  run: {
+    next
+  }
+} = Ember
 
 const testTemplate = hbs`
-  {{#frost-info-bar hook=hook}}
-    {{#block-slot 'icon'}}
-      Yielded icon
-    {{/block-slot}}
-    {{#block-slot 'title'}}
-      Yielded title
-    {{/block-slot}}
-    {{#block-slot 'summary'}}
-      Yielded summary
-    {{/block-slot}}
-    {{#block-slot 'controls'}}
-      Yielded controls
-    {{/block-slot}}
-    {{#block-slot 'actions' as |action|}}
-      {{action.button icon='infobar-create' text='Click me!'}}
-    {{/block-slot}}
-  {{/frost-info-bar}}`
+  {{frost-info-bar hook=hook
+    icon=(component 'frost-icon'
+      icon='bacon'
+      pack='dummy'
+    )
+    title=(component 'text-box'
+      text='&lt;placeholder: title&gt;'
+    )
+    summary=(component 'text-box'
+      isVisible=summary
+      text='&lt;placeholder: summary&gt;'
+    )
+    scope=(component 'text-box'
+      text='&lt;placeholder: scope&gt;'
+    )
+    controls=(component 'frost-button'
+      design='info-bar'
+      icon='infobar-create'
+      text='Click me!'
+      onClick=(action 'triggerAction')
+    )
+  }}`
 
 describeComponent(
   'ember-frost-info-bar',
@@ -31,41 +44,56 @@ describeComponent(
   },
   function () {
     let props
+    let spy
     beforeEach(function () {
       initialize()
+      spy = sinon.spy()
       props = {
-        hook: 'my-info-bar'
+        hook: 'my-info-bar',
+        actions: {
+          triggerAction: spy
+        }
       }
       this.setProperties(props)
       this.render(testTemplate)
     })
-
+    const text = (el) => el.text().trim()
     it('has a default hook name', function () {
-      this.render(hbs`
-        {{frost-info-bar}}
-      `)
-
-      expect($hook('info-bar').hasClass('frost-info-bar')).to.be.true
+      const el = $hook('my-info-bar')
+      expect(el.hasClass('frost-info-bar')).to.be.true
     })
 
     it('has a hook for icon', function () {
-      expect($hook('my-info-bar-icon').text().trim()).to.eql('Yielded icon')
+      const el = $hook('my-info-bar-icon')
+      expect(el.hasClass('frost-info-bar-icon')).to.be.true
     })
 
     it('has a hook for title', function () {
-      expect($hook('my-info-bar-title').text().trim()).to.eql('Yielded title')
+      const el = $hook('my-info-bar-title')
+      expect(text(el)).to.eql('<placeholder: title>')
     })
 
     it('has a hook for summary', function () {
-      expect($hook('my-info-bar-summary').text().trim()).to.eql('Yielded summary')
+      const el = $hook('my-info-bar-summary')
+      expect(text(el)).to.eql('<placeholder: summary>')
+    })
+
+    it('has a hook for scope', function () {
+      const el = $hook('my-info-bar-scope')
+      expect(text(el)).to.eql('<placeholder: scope>')
     })
 
     it('has a hook for controls', function () {
-      expect($hook('my-info-bar-controls').text().trim()).to.eql('Yielded controls')
+      const el = $hook('my-info-bar-controls')
+      expect(text(el)).to.eql('Click me!')
     })
-
-    it('has a hook for actions', function () {
-      expect($hook('my-info-bar-action').text().trim()).to.eql('Click me!')
+    it('triggers action correctly', function (done) {
+      const el = $hook('my-info-bar-controls')
+      el.find('button').click()
+      next(() => {
+        expect(spy.called).to.be.true
+        done()
+      })
     })
   }
 )

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "ember server",
-    "lint": "eslint *.js addon app blueprints config tests",
+    "lint": "eslint *.js addon app blueprints config tests --fix",
     "build": "ember build",
     "test": "npm run-script lint && ember test"
   },
@@ -33,6 +33,9 @@
     "ember-cli-app-version": "1.0.0",
     "ember-cli-blanket": "0.9.5",
     "ember-cli-dependency-checker": "^1.2.0",
+    "ember-cli-deploy": "1.0.0-beta.1",
+    "ember-cli-deploy-build": "0.1.1",
+    "ember-cli-deploy-gh-pages": "git://github.com/srowhani/ember-cli-deploy-gh-pages.git#cae2ad06e8cd24d1dd32af98275e674a46d7441b",
     "ember-cli-htmlbars-inline-precompile": "0.3.1",
     "ember-cli-inject-live-reload": "1.4.0",
     "ember-cli-mirage": "0.1.13",
@@ -41,6 +44,7 @@
     "ember-cli-release": "0.2.9",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "1.2.0",
+    "ember-code-snippet": "1.4.0",
     "ember-computed-decorators": "0.2.2",
     "ember-data": "~2.6.0",
     "ember-disable-proxy-controllers": "1.0.1",
@@ -51,6 +55,7 @@
     "ember-lodash": "0.0.10",
     "ember-one-way-controls": "0.8.3",
     "ember-resolver": "^2.0.3",
+    "ember-sinon": "0.5.1",
     "ember-truth-helpers": "1.2.0",
     "ember-try": "^0.2.0",
     "eslint": "^2.9.0",
@@ -64,7 +69,6 @@
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
-    "ember-block-slots": "^1.1.0",
     "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-sass": "^5.1.0",
     "ember-computed-decorators": "^0.2.2",

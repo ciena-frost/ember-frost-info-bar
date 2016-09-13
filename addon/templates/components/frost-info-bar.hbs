@@ -1,40 +1,22 @@
-{{yield}}
-
-{{#yield-slot 'icon'}}
-  <div class='frost-info-bar-icon' data-test={{hook (concat hook '-icon')}}>
-    {{yield}}
-  </div>
-{{/yield-slot}}
-
-<div class='title'>
-  {{#yield-slot 'title'}}
-      <div class='primary-title' data-test={{hook (concat hook '-title')}}>
-        {{yield}}
-      </div>
-  {{/yield-slot}}
-
-  {{#yield-slot 'summary'}}
-      <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
-        {{yield}}
-      </div>
-  {{/yield-slot}}
+<!-- Icon -->
+<div class='frost-info-bar-icon' data-test={{hook (concat hook '-icon')}}>
+  {{component icon}}
 </div>
-
-{{#yield-slot 'controls'}}
-    <div class='controls' data-test={{hook (concat hook '-controls')}}>
-      {{yield}}
-    </div>
-{{/yield-slot}}
-
-{{#yield-slot 'actions' (block-params
-  (hash
-    button=(component 'frost-button'
-      design='info-bar'
-      hook=(concat hook '-action')
-    )
-  )
-)}}
-    <div class='actions'>
-      {{yield}}
-    </div>
-{{/yield-slot}}
+<!-- Title -->
+<div class='title'>
+  <div class='primary-title' data-test={{hook (concat hook '-title')}}>
+    {{component title}}
+  </div>
+  <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
+    {{component summary}}
+  </div>
+</div>
+<!-- Controls -->
+<div class='scope' data-test={{hook (concat hook '-scope')}}>
+  {{component scope}}
+</div>
+<!-- Actions -->
+<div class='controls' data-test={{hook (concat hook '-controls')}}>
+  {{component controls}}
+</div>
+{{yield}}

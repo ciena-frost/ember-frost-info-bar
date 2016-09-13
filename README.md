@@ -14,32 +14,31 @@
 ember install ember-frost-info-bar
 ```
 
-## Slots API
-
-Using [ember-block-slots](https://github.com/ciena-blueplanet/ember-block-slots), this component will provide an icon, title and subtitle area, controls area for components like Search and actions slot.
-
 ## Examples
-### Block Format
+### Template
 ```handlebars
-{{#frost-info-bar}}
-  {{#block-slot 'icon'}}
-    Icon section
-  {{/block-slot}}
-  {{#block-slot 'title'}}
-    Title section
-  {{/block-slot}}
-  {{#if summary}}
-    {{#block-slot 'summary'}}
-      Summary section
-    {{/block-slot}}
-  {{/if}}
-  {{#block-slot 'controls'}}
-      Context controls section
-  {{/block-slot}}
-  {{#block-slot 'actions' as |action|}}
-    {{action.button icon='frost/infobar-create' text='Click me!' onClick=(action 'triggerAction')}}
-  {{/block-slot}}
-{{/frost-info-bar}}
+{{frost-info-bar
+  icon-module=(component 'frost-icon'
+    icon='bacon'
+    pack='dummy'
+  )
+  title-module=(component 'text-box'
+    text='&lt;placeholder: title&gt;'
+  )
+  summary-module=(component 'text-box'
+    isVisible=summary
+    text='&lt;placeholder: summary&gt;'
+  )
+  controls-module=(component 'text-box'
+    text='&lt;placeholder: controls&gt;'
+  )
+  actions-module=(component 'frost-button'
+    design='info-bar'
+    icon='infobar-create'
+    text='Click me!'
+    onClick=(action 'triggerAction')
+  )
+}}
 ```
 
 ## Testing with ember-hook

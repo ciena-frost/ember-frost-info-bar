@@ -7,12 +7,13 @@ $info-bar-padding-top-bottom: 20px;
 $info-bar-title-separator: 5px;
 
 .frost-info-bar {
+  align-items: center;
+  background-color: $frost-color-white;
+  border-bottom: $info-bar-border-width solid $frost-color-lgrey-1;
   display: flex;
   flex-direction: row;
-  align-items: center;
   height: $info-bar-height;
-  border-bottom: $info-bar-border-width solid $frost-color-lgrey-1;
-  background-color: $frost-color-white;
+  overflow: hidden;
   padding: $info-bar-padding-top-bottom $info-bar-padding-right $info-bar-padding-top-bottom $info-bar-padding-left;
 
   .icon {
@@ -31,8 +32,8 @@ $info-bar-title-separator: 5px;
 
   .title {
     .primary-title {
-      font-size: $frost-font-m;
       color: $frost-color-night-2;
+      font-size: $frost-font-m;
     }
 
     .primary-title ~ .sub-title {
@@ -40,18 +41,18 @@ $info-bar-title-separator: 5px;
     }
 
     .sub-title {
-      font-size: $frost-font-s;
       color: $frost-color-grey-5;
+      font-size: $frost-font-s;
     }
   }
 
-  .controls {
-    flex: 1;
+  .scope {
     display: flex;
+    flex: 1;
     justify-content: center;
   }
 
-  .actions {
+  .controls {
     margin-left: auto;
   }
 }

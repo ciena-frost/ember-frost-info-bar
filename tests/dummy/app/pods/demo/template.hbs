@@ -1,53 +1,72 @@
-{{#frost-info-bar}}
-  {{#block-slot 'icon'}}
-    {{frost-icon
-      icon='bacon'
-      pack='dummy'
-    }}
-  {{/block-slot}}
-  {{#block-slot 'title'}}
-    &lt;placeholder: title&gt;
-  {{/block-slot}}
-  {{#if summary}}
-    {{#block-slot 'summary'}}
-      &lt;placeholder: summary&gt;
-    {{/block-slot}}
-  {{/if}}
-  {{#block-slot 'controls'}}
-      &lt;placeholder: controls&gt;
-  {{/block-slot}}
-  {{#block-slot 'actions' as |action|}}
-    {{action.button
-      icon='infobar-create'
-      text='Click me!'
-      onClick=(action 'triggerAction')
-    }}
-  {{/block-slot}}
-{{/frost-info-bar}}
-
+<!-- BEGIN-SNIPPET template -->
+{{frost-info-bar
+  icon=(component 'frost-icon'
+    isVisible=isIconVisible
+    icon='bacon'
+    pack='dummy'
+  )
+  title=(component 'text-box'
+    isVisible=isTitleVisible
+    text='&lt;placeholder: title&gt;'
+  )
+  summary=(component 'text-box'
+    isVisible=isSummaryVisible
+    text='&lt;placeholder: summary&gt;'
+  )
+  scope=(component 'text-box'
+    isVisible=isScopeVisible
+    text='&lt;placeholder: controls&gt;'
+  )
+  controls=(component 'frost-button'
+    isVisible=isControlsVisible
+    design='info-bar'
+    icon='infobar-create'
+    text='Click me!'
+    onClick=(action 'triggerAction')
+  )
+}}
+<!-- END-SNIPPET -->
 <div class='demo-controls'>
   {{frost-button
     priority='secondary'
     size='small'
-    text='Toggle summary on/off'
-    onClick=(action 'toggleSummary')
+    text='icon on/off'
+    onClick=(action (mut isIconVisible) (not isIconVisible))
   }}
   {{frost-button
     priority='secondary'
     size='small'
-    text='Toggle summary on/off'
-    onClick=(action 'toggleSummary')
+    text='title on/off'
+    onClick=(action (mut isTitleVisible) (not isTitleVisible))
   }}
   {{frost-button
     priority='secondary'
     size='small'
-    text='Toggle summary on/off'
-    onClick=(action 'toggleSummary')
+    text='summary on/off'
+    onClick=(action (mut isSummaryVisible) (not isSummaryVisible))
   }}
   {{frost-button
     priority='secondary'
     size='small'
-    text='Toggle summary on/off'
-    onClick=(action 'toggleSummary')
+    text='scope on/off'
+    onClick=(action (mut isScopeVisible) (not isScopeVisible))
   }}
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='controls on/off'
+    onClick=(action (mut isControlsVisible) (not isControlsVisible))
+  }}
+</div>
+<div class='page-content'>
+  <div class='row'>
+    <div class='item'>
+      <h3>Controller</h3>
+      {{code-snippet name='controller.js'}}
+    </div>
+    <div class='item'>
+      <h3>Template</h3>
+      {{code-snippet name='template.hbs'}}
+    </div>
+  </div>
 </div>
