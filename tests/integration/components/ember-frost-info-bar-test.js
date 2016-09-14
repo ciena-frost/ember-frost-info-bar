@@ -28,11 +28,13 @@ const testTemplate = hbs`
     scope=(component 'text-box'
       text='&lt;placeholder: scope&gt;'
     )
-    controls=(component 'frost-button'
-      design='info-bar'
-      icon='infobar-create'
-      text='Click me!'
-      onClick=(action 'triggerAction')
+    controls=(array
+      (component 'frost-button'
+        isVisible=isControlsVisible
+        icon='infobar-create'
+        text='Click me!'
+        onClick=(action 'triggerAction')
+      )
     )
   }}`
 
@@ -84,12 +86,12 @@ describeComponent(
     })
 
     it('has a hook for controls', function () {
-      const el = $hook('my-info-bar-controls')
+      const el = $hook('my-info-bar-controls-0')
       expect(text(el)).to.eql('Click me!')
     })
     it('triggers action correctly', function (done) {
-      const el = $hook('my-info-bar-controls')
-      el.find('button').click()
+      const el = $hook('my-info-bar-controls-0')
+      el.click()
       next(() => {
         expect(spy.called).to.be.true
         done()

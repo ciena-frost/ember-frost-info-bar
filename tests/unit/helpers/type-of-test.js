@@ -1,17 +1,19 @@
 /* jshint expr:true */
-import { expect } from 'chai';
+import { expect } from 'chai'
 import {
   describe,
   it
-} from 'mocha';
+} from 'mocha'
 import {
   typeOf
-} from 'ember-frost-info-bar/helpers/type-of';
+} from 'ember-frost-info-bar/helpers/type-of'
 
-describe('TypeOfHelper', function() {
+describe('TypeOfHelper', function () {
   // Replace this with your real tests.
-  it('works', function() {
-    let result = typeOf(42);
-    expect(result).to.be.ok;
-  });
-});
+  it('works', function () {
+    const tester = {}
+    const type = 'object'
+    const result = typeOf([tester, type])
+    expect(result).to.be.ok
+  })
+})

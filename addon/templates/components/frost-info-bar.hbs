@@ -25,8 +25,11 @@
 </div>
 <!-- Actions -->
 <div class='controls' data-test={{hook (concat hook '-controls')}}>
-    {{#each controls as |control|}}
-      {{component control}}
+    {{#each controls as |control index|}}
+      {{component control
+        design='info-bar'
+        hook=(concat hook '-controls-' index)
+      }}
     {{/each}}
 </div>
 {{yield}}
