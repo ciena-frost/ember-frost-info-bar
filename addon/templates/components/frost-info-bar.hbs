@@ -5,10 +5,18 @@
 <!-- Title -->
 <div class='title'>
   <div class='primary-title' data-test={{hook (concat hook '-title')}}>
-    {{component title}}
+      {{#if (type-of title 'object')}}
+        {{component title}}
+      {{else}}
+        {{title}}
+      {{/if}}
   </div>
   <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
-    {{component summary}}
+    {{#if (type-of summary 'object')}}
+      {{component summary}}
+    {{else}}
+      {{summary}}
+    {{/if}}
   </div>
 </div>
 <!-- Controls -->
@@ -17,6 +25,8 @@
 </div>
 <!-- Actions -->
 <div class='controls' data-test={{hook (concat hook '-controls')}}>
-  {{component controls}}
+    {{#each controls as |control|}}
+      {{component control}}
+    {{/each}}
 </div>
 {{yield}}
