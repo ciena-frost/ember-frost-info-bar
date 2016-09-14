@@ -1,3 +1,6 @@
+# 4.0.1
+- Call super init in index.js with applying context.
+
 # 4.0.0
 - Switched from block-slots to `(component)` helper.
 
