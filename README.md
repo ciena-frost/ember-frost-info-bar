@@ -38,7 +38,6 @@ ember install ember-frost-info-bar
   controls=(array
     (component 'frost-button'
       isVisible=isControlsVisible
-      design='info-bar'
       icon='infobar-create'
       text='Click me!'
       onClick=(action 'triggerAction')
@@ -54,6 +53,7 @@ The info-bar component is accessible using ember-hook with the top level hook na
 * Title slot hook - `$hook('<hook-name>-title')`
 * Summary slot hook - `$hook('<hook-name>-summary')'`
 * Controls slot hook - `$hook('<hook-name>-controls')'`
+* Controls slot item hook - `$hook('<hook-name>-controls-<index>')'`
 * Actions slot - `$hook('<hook-name>-action')'`
 
 ## Development
