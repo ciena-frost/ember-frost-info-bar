@@ -30,6 +30,7 @@ const testTemplate = hbs`
     )
     controls=(array
       (component 'frost-button'
+        hook='create'
         isVisible=isControlsVisible
         icon='infobar-create'
         text='Click me!'
@@ -86,11 +87,11 @@ describeComponent(
     })
 
     it('has a hook for controls', function () {
-      const el = $hook('my-info-bar-controls-0')
+      const el = $hook('create')
       expect(text(el)).to.eql('Click me!')
     })
     it('triggers action correctly', function (done) {
-      const el = $hook('my-info-bar-controls-0')
+      const el = $hook('create')
       el.click()
       next(() => {
         expect(spy.called).to.be.true
