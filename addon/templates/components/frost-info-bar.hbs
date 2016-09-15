@@ -1,22 +1,42 @@
 <!-- Icon -->
-<div class='frost-info-bar-icon' data-test={{hook (concat hook '-icon')}}>
-  {{component icon}}
-</div>
+{{#if icon}}
+    <div class='frost-info-bar-icon' data-test={{hook (concat hook '-icon')}}>
+      {{component icon}}
+    </div>
+{{/if}}
 <!-- Title -->
 <div class='title'>
   <div class='primary-title' data-test={{hook (concat hook '-title')}}>
-    {{component title}}
+      {{#if (type-of title 'object')}}
+        {{component title}}
+      {{else}}
+        {{title}}
+      {{/if}}
   </div>
-  <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
-    {{component summary}}
-  </div>
+  {{#if summary}}
+      <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
+        {{#if (type-of summary 'object')}}
+          {{component summary}}
+        {{else}}
+          {{summary}}
+        {{/if}}
+      </div>
+  {{/if}}
 </div>
 <!-- Controls -->
-<div class='scope' data-test={{hook (concat hook '-scope')}}>
-  {{component scope}}
-</div>
+{{#if scope}}
+    <div class='scope' data-test={{hook (concat hook '-scope')}}>
+      {{component scope}}
+    </div>
+{{/if}}
+
 <!-- Actions -->
-<div class='controls' data-test={{hook (concat hook '-controls')}}>
-  {{component controls}}
-</div>
-{{yield}}
+{{#if controls}}
+  <div class='controls' data-test={{hook (concat hook '-controls')}}>
+    {{#each controls as |control index|}}
+      {{component control
+        design='info-bar'
+      }}
+    {{/each}}
+  </div>
+{{/if}}

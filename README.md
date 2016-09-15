@@ -18,25 +18,30 @@ ember install ember-frost-info-bar
 ### Template
 ```handlebars
 {{frost-info-bar
-  icon-module=(component 'frost-icon'
+  icon=(component 'frost-icon'
+    isVisible=isIconVisible
     icon='bacon'
     pack='dummy'
   )
-  title-module=(component 'text-box'
+  title=(component 'text-box'
+    isVisible=isTitleVisible
     text='&lt;placeholder: title&gt;'
   )
-  summary-module=(component 'text-box'
-    isVisible=summary
+  summary=(component 'text-box'
+    isVisible=isSummaryVisible
     text='&lt;placeholder: summary&gt;'
   )
-  controls-module=(component 'text-box'
+  scope=(component 'text-box'
+    isVisible=isScopeVisible
     text='&lt;placeholder: controls&gt;'
   )
-  actions-module=(component 'frost-button'
-    design='info-bar'
-    icon='infobar-create'
-    text='Click me!'
-    onClick=(action 'triggerAction')
+  controls=(array
+    (component 'frost-button'
+      isVisible=isControlsVisible
+      icon='infobar-create'
+      text='Click me!'
+      onClick=(action 'triggerAction')
+    )
   )
 }}
 ```
@@ -48,6 +53,7 @@ The info-bar component is accessible using ember-hook with the top level hook na
 * Title slot hook - `$hook('<hook-name>-title')`
 * Summary slot hook - `$hook('<hook-name>-summary')'`
 * Controls slot hook - `$hook('<hook-name>-controls')'`
+* Controls slot item hook - `$hook('<hook-name>-controls-<index>')'`
 * Actions slot - `$hook('<hook-name>-action')'`
 
 ## Development
