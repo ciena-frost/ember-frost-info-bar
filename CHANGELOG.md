@@ -1,3 +1,12 @@
+# 5.0.0
+
+* **Updated** interface, now `controls` will take an array of components.
+* **Updated** interface, now `title` and `summary` will take either component or string.
+* **Added** `array` helper and `type-of` helper
+
+
+
+
 # 4.0.1
 - Call super init in index.js with applying context.
 
