@@ -1,3 +1,7 @@
+# 5.0.1
+
+* Removed the unused dependency on liquid-fire
+
 # 5.0.0
 
 * **Updated** interface, now `controls` will take an array of components.
