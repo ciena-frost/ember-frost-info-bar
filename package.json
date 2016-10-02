@@ -73,8 +73,7 @@
     "ember-cli-sass": "^5.1.0",
     "ember-computed-decorators": "^0.2.2",
     "ember-frost-core": ">=0.20.0 <1.0.0",
-    "ember-prop-types": "2.2.5",
-    "liquid-fire": "^0.23.0"
+    "ember-prop-types": "^2.2.5"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
