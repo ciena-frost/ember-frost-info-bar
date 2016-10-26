@@ -4,7 +4,6 @@ language: node_js
 node_js:
 - '5.0'
 - 'stable'
-sudo: false
 branches:
   except:
   - "/^v[0-9\\.]+/"
