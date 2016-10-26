@@ -61,6 +61,14 @@ describeComponent(
       this.render(testTemplate)
     })
     const text = (el) => el.text().trim()
+    it('renders', function (done) {
+      const el = $hook('my-info-bar')
+      return capture('frost-info-bar', done, {
+        targetElement: el[0],
+        experimentalSvgs: true
+      })
+    })
+
     it('has a default hook name', function () {
       const el = $hook('my-info-bar')
       expect(el.hasClass('frost-info-bar')).to.be.true
