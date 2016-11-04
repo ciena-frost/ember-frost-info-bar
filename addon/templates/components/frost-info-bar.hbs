@@ -1,41 +1,42 @@
-{{yield}}
-
-{{#yield-slot 'icon'}}
-  <div class='frost-info-bar-icon'>
-    {{yield}}
-  </div>
-{{/yield-slot}}
-
+<!-- Icon -->
+{{#if icon}}
+    <div class='frost-info-bar-icon' data-test={{hook (concat hook '-icon')}}>
+      {{component icon}}
+    </div>
+{{/if}}
+<!-- Title -->
 <div class='title'>
-  {{#yield-slot 'title'}}
-      <div class='primary-title'>
-        {{yield}}
+  <div class='primary-title' data-test={{hook (concat hook '-title')}}>
+      {{#if (type-of title 'object')}}
+        {{component title}}
+      {{else}}
+        {{title}}
+      {{/if}}
+  </div>
+  {{#if summary}}
+      <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
+        {{#if (type-of summary 'object')}}
+          {{component summary}}
+        {{else}}
+          {{summary}}
+        {{/if}}
       </div>
-  {{/yield-slot}}
-
-  {{#yield-slot 'summary'}}
-      <div class='sub-title'>
-        {{yield}}
-      </div>
-  {{/yield-slot}}
+  {{/if}}
 </div>
-
-{{#yield-slot 'controls'}}
-    <div class='controls'>
-      {{yield}}
+<!-- Controls -->
+{{#if scope}}
+    <div class='scope' data-test={{hook (concat hook '-scope')}}>
+      {{component scope}}
     </div>
-{{/yield-slot}}
+{{/if}}
 
-{{#yield-slot 'actions' (block-params
-  (hash
-    button=(component 'frost-button'
-      priority='tertiary'
-      size='small'
-      vertical=true
-    )
-  )
-)}}
-    <div class='actions'>
-      {{yield}}
-    </div>
-{{/yield-slot}}
+<!-- Actions -->
+{{#if controls}}
+  <div class='controls' data-test={{hook (concat hook '-controls')}}>
+    {{#each controls as |control index|}}
+      {{component control
+        design='info-bar'
+      }}
+    {{/each}}
+  </div>
+{{/if}}

@@ -3,7 +3,7 @@ module.exports = function (environment) {
     modulePrefix: 'dummy',
     podModulePrefix: 'dummy/pods',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -11,7 +11,6 @@ module.exports = function (environment) {
         // e.g. 'with-controller': true
       }
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -28,7 +27,7 @@ module.exports = function (environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/'
+    ENV.rootURL = '/'
     ENV.locationType = 'none'
 
     // keep test console output quieter
@@ -38,8 +37,9 @@ module.exports = function (environment) {
     ENV.APP.rootElement = '#ember-testing'
   }
 
-  if (environment === 'production') {
-    ENV.baseURL = '/ember-frost-info-bar'
+  if (environment === 'production' || environment === 'pages') {
+    ENV.rootURL = '/ember-frost-info-bar'
+    ENV.locationType = 'hash'
   }
 
   return ENV

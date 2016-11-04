@@ -11,17 +11,25 @@ $info-bar-title-separator: 5px;
   flex-direction: row;
   align-items: center;
   height: $info-bar-height;
+  padding: $info-bar-padding-top-bottom $info-bar-padding-right $info-bar-padding-top-bottom $info-bar-padding-left;
   border-bottom: $info-bar-border-width solid $frost-color-lgrey-1;
   background-color: $frost-color-white;
-  padding: $info-bar-padding-top-bottom $info-bar-padding-right $info-bar-padding-top-bottom $info-bar-padding-left;
+  overflow: hidden;
+
+  &.center {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+  }
 
   .icon {
-    height: 45px;
     width: 45px;
+    height: 45px;
 
     svg {
-      height: 45px;
       width: 45px;
+      height: 45px;
     }
   }
 
@@ -31,8 +39,8 @@ $info-bar-title-separator: 5px;
 
   .title {
     .primary-title {
-      font-size: $frost-font-m;
       color: $frost-color-night-2;
+      font-size: $frost-font-m;
     }
 
     .primary-title ~ .sub-title {
@@ -40,39 +48,32 @@ $info-bar-title-separator: 5px;
     }
 
     .sub-title {
-      font-size: $frost-font-s;
       color: $frost-color-grey-5;
+      font-size: $frost-font-s;
     }
   }
 
-  .controls {
-    flex: 1;
+  .scope {
     display: flex;
+    flex: 1;
     justify-content: center;
   }
 
-  .actions {
+  .controls {
     margin-left: auto;
   }
 }
 
 .frost-info-bar-icon {
-  height: 45px;
   width: 45px;
+  height: 45px;
 
   svg {
-    height: 45px;
     width: 45px;
+    height: 45px;
   }
 }
 
 .frost-info-bar-icon ~ .title {
   margin-left: 15px;
-}
-
-.frost-info-bar .center {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: center;
 }

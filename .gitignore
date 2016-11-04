@@ -18,3 +18,5 @@ testem.log
 coverage.json
 teamcity.txt
 .idea
+/typings
+/visual-acceptance

@@ -15,43 +15,46 @@ ember install ember-frost-info-bar
 ```
 
 ## Examples
-### Block Format
+### Template
 ```handlebars
-{{#frost-info-bar as |slot|}}
-  {{#block-slot slot 'title'}}
-      User accounts
-  {{/block-slot}}
-  {{#block-slot slot 'summary'}}
-      Summary section
-  {{/block-slot}}
-  {{#block-slot slot 'context-controls'}}
-      Context controls section
-  {{/block-slot}}
-  {{#block-slot slot 'actions' as |action|}}
-    {{action.button icon='frost/infobar-create' text='Create' onClick=(action 'createUser')}}
-  {{/block-slot}}
-{{/frost-info-bar}}
+{{frost-info-bar
+  icon=(component 'frost-icon'
+    isVisible=isIconVisible
+    icon='bacon'
+    pack='dummy'
+  )
+  title=(component 'text-box'
+    isVisible=isTitleVisible
+    text='&lt;placeholder: title&gt;'
+  )
+  summary=(component 'text-box'
+    isVisible=isSummaryVisible
+    text='&lt;placeholder: summary&gt;'
+  )
+  scope=(component 'text-box'
+    isVisible=isScopeVisible
+    text='&lt;placeholder: controls&gt;'
+  )
+  controls=(array
+    (component 'frost-button'
+      isVisible=isControlsVisible
+      icon='infobar-create'
+      text='Click me!'
+      onClick=(action 'triggerAction')
+    )
+  )
+}}
 ```
 
-### HTML Format
-```handlebars
-<div class='frost-info-bar'>
-    <div class='title'>
-        <div class='primary-title'>User accounts</div>
-        <div class='sub-title'>View and manage user accounts</div>
-    </div>
-    <div class='action'>
-    {{frost-button
-      onClick=(action 'createUser')
-      priority="tertiary"
-      size="medium"
-      icon="frost/infobar-create"
-      text="Create"
-      vertical=true
-    }}
-    </div>
-</div>
-```
+## Testing with ember-hook
+The info-bar component is accessible using ember-hook with the top level hook name or you can access the internal components as well -
+* Default top level hook - `$hook('info-bar')`
+* Icon slot hook - `$hook('<hook-name>-icon')`
+* Title slot hook - `$hook('<hook-name>-title')`
+* Summary slot hook - `$hook('<hook-name>-summary')'`
+* Controls slot hook - `$hook('<hook-name>-controls')'`
+* Controls slot item hook - `$hook('<hook-name>-controls-<index>')'`
+* Actions slot - `$hook('<hook-name>-action')'`
 
 ## Development
 ### Setup

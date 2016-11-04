@@ -6,7 +6,9 @@ import {beforeEach, it} from 'mocha'
 describeComponent(
   'frost-info-bar',
   'FrostInfoBarComponent',
-  {},
+  {
+    unit: true
+  },
   function () {
     let component
 

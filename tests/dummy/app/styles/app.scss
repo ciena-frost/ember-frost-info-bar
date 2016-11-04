@@ -1,11 +1,83 @@
 @import 'node_modules/ember-frost-core/addon/styles/frost-theme';
 
+$hljs-box-shadow-color1: rgba(0, 0, 0 , .1);
+$hljs-box-shadow-color2: rgba(0, 0, 0, .2);
+$hljs-text-color: #98a0b0;
+$hljs-bg-color: #21252e;
+$hljs-keyword-text-color: #b959d8;
+$hljs-built-in-text-color: #dfb563;
+$hljs-string-text-color: #86bb62;
+$hljs-number-text-color: #c7894f;
+$hljs-tag-name-text-color: #d95360;
+$hljs-tag-attribute-text-color: #c7894f;
+
 .dummy-notification-container {
   position: fixed;
   top: 60px;
   right: 10px;
-  z-index: 999;
   width: 80%;
   max-width: 400px;
   margin: auto;
+  z-index: 999;
+}
+
+.page-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item {
+      width: 100%;
+    }
+  }
+
+  .hljs {
+    width: 90%;
+    max-height: 50vh;
+    padding: .9em;
+    border-radius: 3px;
+    background: $hljs-bg-color;
+    color: $hljs-text-color;
+    box-shadow: 0 1px 2px 0 $hljs-box-shadow-color1, 0 4px 8px 0 $hljs-box-shadow-color2;
+    overflow: scroll;
+
+    .hljs-keyword {
+      color: $hljs-keyword-text-color;
+    }
+
+    .hljs-built_in {
+      color: $hljs-built-in-text-color;
+    }
+
+    .hljs-string {
+      color: $hljs-string-text-color;
+    }
+
+    .hljs-number,
+    .hljs-subst {
+      color: $hljs-number-text-color;
+    }
+
+    .hljs-tag {
+      color: inherit;
+
+      .hljs-name {
+        color: $hljs-tag-name-text-color;
+      }
+
+      .hljs-attr {
+        color: $hljs-tag-attribute-text-color;
+      }
+    }
+  }
 }
