@@ -1,13 +1,38 @@
-[ci-img]: https://travis-ci.org/ciena-frost/ember-frost-info-bar.svg "Build Status"
+[ci-img]: https://img.shields.io/travis/ciena-frost/ember-frost-info-bar.svg "Travis CI Build Status"
 [ci-url]: https://travis-ci.org/ciena-frost/ember-frost-info-bar
 
-[cov-img]: https://coveralls.io/repos/github/ciena-frost/ember-frost-info-bar/badge.svg?branch=master "Code Coverage"
+[cov-img]: https://img.shields.io/coveralls/ciena-frost/ember-frost-info-bar.svg "Coveralls Code Coverage"
 [cov-url]: https://coveralls.io/github/ciena-frost/ember-frost-info-bar
 
 [npm-img]: https://img.shields.io/npm/v/ember-frost-info-bar.svg "NPM Version"
 [npm-url]: https://www.npmjs.com/package/ember-frost-info-bar
 
-# ember-frost-info-bar <br /> [![Travis][ci-img]][ci-url] [![Coveralls][cov-img]][cov-url] [![NPM][npm-img]][npm-url]
+[ember-observer-badge]: http://emberobserver.com/badges/ember-frost-info-bar.svg "Ember Observer score"
+[ember-observer-badge-url]: http://emberobserver.com/addons/ember-frost-info-bar
+
+[ember-img]: https://img.shields.io/badge/ember-2.3+-orange.svg "Ember 2.3+"
+
+[bithound-img]: https://www.bithound.io/github/ciena-frost/ember-frost-info-bar/badges/score.svg "bitHound"
+[bithound-url]: https://www.bithound.io/github/ciena-frost/ember-frost-info-bar
+
+
+# ember-frost-info-bar
+###### Dependencies
+
+![Ember][ember-img]
+[![NPM][npm-img]][npm-url]
+
+###### Health
+
+[![Travis][ci-img]][ci-url]
+[![Coveralls][cov-img]][cov-url]
+
+###### Security
+
+[![bitHound][bithound-img]][bithound-url]
+
+###### Ember Observer score
+[![EmberObserver][ember-observer-badge]][ember-observer-badge-url]
 
 ## Installation
 ```

@@ -7,8 +7,12 @@ const {
 } = Ember
 
 export default Component.extend(PropTypeMixin, {
+  // == Properties ============================================================
+
   classNames: ['frost-info-bar'],
   layout,
+
+  // == State Properties ============================================================
 
   propTypes: {
     hook: PropTypes.string

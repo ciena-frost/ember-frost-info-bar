@@ -2,7 +2,7 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-- '5.0'
+- '6.9'
 - 'stable'
 branches:
   except:
@@ -17,8 +17,6 @@ env:
   matrix:
   - EMBER_TRY_SCENARIO=default
   - EMBER_TRY_SCENARIO=ember-release
-  - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
   global:
     - CXX=g++-4.8
     - secure: bd5uSwYFElJTMRntn9qGRr+zNdDD7j338CZ110mvs21uzF7L+vpK7kQPvrWs+qeZj2cG2LidkhFQjvhhtaDuf1yRKzXuWPEZ8quCH/S5Kv2JBSXVCbTkMvjKHvSVNrlm8vYtxbxEuJZPd/8KWvnlSZSgBmmUMSKPnZIJeMaoKMnhjTrDonYzClIUpCqtyLqxp7S0TscZKnX12kuNfVY9m8b2EnbnKodzJbABGLmpk+TDXjZZ2TS+W0qBZ/z8S6wSslX3XLN0a+3QLc3JF3+j8tojnlQsqzwxcUn4QYgjzx71LHuShEHNEZLR03chBe+/sLNuuOqODyg5R2t+X6qqSvjf93QpJIiJDKhCdh2hKix5NRhrTP1Ghkt3/jbBmbP+FeOI2O+GrbJRItvzEWTxHev7qsC6cJcnLuMyNqrvD4QNn2Ex9bV+qYeShCqLbxI4xwNMeJPJKlEmM2NTjBSqSi0f+p0r0vT8cbwLsIXaLHqj0mLQhoGnFl/YRA8ytPGUeK2xCjL5HKJSxgxUQB1Y2IRrMdAQ6ll24JGHvq4RHlEIMeZoAVGTeT9OgtZ8MMtYP6iZc9VQ/HHo+epgWMC6biJv4nRISNykuz79S3pYLDgnehLvGtmbBlxXY2o+kwQG2x3i57oxOSiv8ZT6mBOxbFajn4G27Od2tey+Vfnc/bU=
