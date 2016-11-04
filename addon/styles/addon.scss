@@ -1,5 +1,5 @@
 @import 'node_modules/ember-frost-core/addon/styles/frost-theme';
-$info-bar-height: 75px;
+$info-bar-height: 70px;
 $info-bar-border-width: 1px;
 $info-bar-padding-left: 30px;
 $info-bar-padding-right: 0;
@@ -10,7 +10,7 @@ $info-bar-title-separator: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: $info-bar-height + $info-bar-border-width;
+  height: $info-bar-height;
   border-bottom: $info-bar-border-width solid $frost-color-lgrey-1;
   background-color: $frost-color-white;
   padding: $info-bar-padding-top-bottom $info-bar-padding-right $info-bar-padding-top-bottom $info-bar-padding-left;

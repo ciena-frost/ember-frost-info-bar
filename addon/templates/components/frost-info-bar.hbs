@@ -8,20 +8,20 @@
 
 <div class='title'>
   {{#yield-slot 'title'}}
-      <div class='primary-title' data-test={{hook (concat hook '-title')}}>
+      <div class='primary-title'>
         {{yield}}
       </div>
   {{/yield-slot}}
 
   {{#yield-slot 'summary'}}
-      <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
+      <div class='sub-title'>
         {{yield}}
       </div>
   {{/yield-slot}}
 </div>
 
 {{#yield-slot 'controls'}}
-    <div class='controls' data-test={{hook (concat hook '-controls')}}>
+    <div class='controls'>
       {{yield}}
     </div>
 {{/yield-slot}}
@@ -29,8 +29,9 @@
 {{#yield-slot 'actions' (block-params
   (hash
     button=(component 'frost-button'
-      design='info-bar'
-      hook=(concat hook '-action')
+      priority='tertiary'
+      size='small'
+      vertical=true
     )
   )
 )}}

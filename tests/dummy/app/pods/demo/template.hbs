@@ -1,4 +1,4 @@
-{{#frost-info-bar hook='my-info-bar'}}
+{{#frost-info-bar}}
   {{#block-slot 'icon'}}
     {{frost-icon
       icon='bacon'
@@ -17,11 +17,29 @@
       &lt;placeholder: controls&gt;
   {{/block-slot}}
   {{#block-slot 'actions' as |action|}}
-    {{action.button icon='infobar-create' text='Click me!' onClick=(action 'triggerAction')}}
+    {{action.button icon='frost/infobar-create' text='Create' onClick=(action 'createUser')}}
   {{/block-slot}}
 {{/frost-info-bar}}
 
 <div class='demo-controls'>
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='Toggle summary on/off'
+    onClick=(action 'toggleSummary')
+  }}
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='Toggle summary on/off'
+    onClick=(action 'toggleSummary')
+  }}
+  {{frost-button
+    priority='secondary'
+    size='small'
+    text='Toggle summary on/off'
+    onClick=(action 'toggleSummary')
+  }}
   {{frost-button
     priority='secondary'
     size='small'
