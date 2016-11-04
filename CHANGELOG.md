@@ -1,3 +1,9 @@
+# 7.0.0
+**update** node version.
+**update** blueprint
+**remove** mirage.
+
+
 # 6.0.0
 No CHANGELOG section found in Pull Request description.
 Use a `# CHANGELOG` section in your Pull Request description to auto-populate the `CHANGELOG.md`
