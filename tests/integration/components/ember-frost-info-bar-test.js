@@ -1,5 +1,8 @@
 import {expect} from 'chai'
-import {$hook, initialize} from 'ember-hook'
+import {
+  $hook,
+  initialize as initializeHook
+} from 'ember-hook'
 import {describeComponent, it} from 'ember-mocha'
 import hbs from 'htmlbars-inline-precompile'
 import {beforeEach} from 'mocha'
@@ -49,7 +52,7 @@ describeComponent(
     let props
     let spy
     beforeEach(function () {
-      initialize()
+      initializeHook()
       spy = sinon.spy()
       props = {
         hook: 'my-info-bar',
