@@ -6,6 +6,7 @@
 {{/if}}
 <!-- Title -->
 <div class='title'>
+  {{#if title}}
   <div class='primary-title' data-test={{hook (concat hook '-title')}}>
       {{#if (type-of title 'object')}}
         {{component title}}
@@ -13,6 +14,7 @@
         {{title}}
       {{/if}}
   </div>
+  {{/if}}
   {{#if summary}}
       <div class='sub-title' data-test={{hook (concat hook '-summary')}}>
         {{#if (type-of summary 'object')}}
@@ -33,7 +35,7 @@
 <!-- Actions -->
 {{#if controls}}
   <div class='controls' data-test={{hook (concat hook '-controls')}}>
-    {{#each controls as |control index|}}
+    {{#each controls as |control|}}
       {{component control
         design='info-bar'
       }}

@@ -19,5 +19,12 @@ describeComponent(
     it('includes className frost-info-bar', function () {
       expect(component.classNames).to.include('frost-info-bar')
     })
+
+    it('sets hook to a default', function () {
+      expect(
+        component.get('hook'),
+        'hook is set to a default'
+      ).to.eql('info-bar')
+    })
   }
 )
