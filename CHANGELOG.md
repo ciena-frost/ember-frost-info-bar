@@ -1,3 +1,14 @@
+# 7.0.1
+- **Added/Updated** unit/integration tests to increase test coverage
+- **Removed** unused `index` from template's control `each` section
+- **Added** `{{if title}}` clause around `div` for `primary-title` class and `-title` hook
+
+<!-- Reviewable:start -->
+---
+This change is [<img src="https://reviewable.io/review_button.svg" height="34" align="absmiddle" alt="Reviewable"/>](https://reviewable.io/reviews/ciena-frost/ember-frost-info-bar/45)
+<!-- Reviewable:end -->
+
+
 # 7.0.0
 **update** node version.
 **update** blueprint
