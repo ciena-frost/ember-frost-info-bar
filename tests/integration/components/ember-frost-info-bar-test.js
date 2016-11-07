@@ -54,23 +54,14 @@ describeComponent(
       })
     })
 
-    it('renders the default component', function () {
-      this.render(hbs`
-        {{frost-info-bar}}
-      `)
-
-      expect(
-        this.$('.frost-info-bar')
-      ).to.have.length(1)
-    })
-
     it('has a default hook name', function () {
       this.render(hbs`
         {{frost-info-bar}}
       `)
 
       expect(
-        this.$($hook('info-bar')).hasClass('frost-info-bar')
+        this.$($hook('info-bar')).hasClass('frost-info-bar'),
+        'default hook exists'
       ).to.be.true
     })
 
