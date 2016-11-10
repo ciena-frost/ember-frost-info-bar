@@ -1,3 +1,7 @@
+# 7.0.2
+- **Added** test to verify mixin is present
+
+
 # 7.0.1
 - **Added/Updated** unit/integration tests to increase test coverage
 - **Removed** unused `index` from template's control `each` section
