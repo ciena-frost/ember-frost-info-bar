@@ -2,6 +2,7 @@ const expect = chai.expect
 
 import {describeComponent} from 'ember-mocha'
 import {beforeEach, it} from 'mocha'
+import PropTypeMixin from 'ember-prop-types'
 
 describeComponent(
   'frost-info-bar',
@@ -25,6 +26,13 @@ describeComponent(
         component.get('hook'),
         'hook is set to a default'
       ).to.eql('info-bar')
+    })
+
+    it('has the expected Mixins', function () {
+      expect(
+        PropTypeMixin.detect(component),
+        'PropTypeMixin Mixin is present'
+      ).to.be.true
     })
   }
 )
