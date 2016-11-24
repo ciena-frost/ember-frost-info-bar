@@ -10,7 +10,9 @@
     "ember-mocha": "~0.8.11",
     "lodash": "^4.5.1",
     "perfect-scrollbar": ">=0.6.7 <2.0.0",
-    "sinonjs": "1.17.1"
+    "sinonjs": "1.17.1",
+    "chai-jquery": "^2.0.1",
+    "sinon-chai": "^2.8.0"
   },
   "resolutions": {
     "ember": "~2.8.0"
