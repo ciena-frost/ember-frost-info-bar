@@ -1,3 +1,7 @@
+# 8.0.0
+Updated Dependencies to use version ^1.0.0 of ember-frost-core. None of the existing functionality was broken so further modification was not required. 
+
+
 # 7.0.2
 - **Added** test to verify mixin is present
 
