@@ -80,7 +80,7 @@
     "ember-cli-htmlbars": "^1.0.1",
     "ember-cli-sass": "^5.1.0",
     "ember-computed-decorators": "^0.2.2",
-    "ember-frost-core": ">=0.20.0 <1.0.0",
+    "ember-frost-core": "^1.0.0",
     "ember-prop-types": "^3.0.0"
   },
   "ember-addon": {
