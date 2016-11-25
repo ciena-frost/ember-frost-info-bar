@@ -1,3 +1,7 @@
+# 8.1.0
+* Add icons related to the addon
+
+
 # 8.0.0
 Updated Dependencies to use version ^1.0.0 of ember-frost-core. None of the existing functionality was broken so further modification was not required. 
 
