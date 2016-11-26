@@ -87,6 +87,6 @@
     "configPath": "tests/dummy/config"
   },
   "ember-frost-icon-pack": {
-    "name": "info-bar"
+    "name": "frost-info-bar"
   }
 }
