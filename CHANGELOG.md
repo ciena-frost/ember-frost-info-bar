@@ -1,3 +1,7 @@
+# 8.1.1
+* Fix naming of icon pack
+
+
 # 8.1.0
 * Add icons related to the addon
 
