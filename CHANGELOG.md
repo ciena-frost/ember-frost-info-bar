@@ -1,3 +1,8 @@
+# 8.1.2
+* Fixed missing icon in dummy app
+
+
+
 # 8.1.1
 * Fix naming of icon pack
 
