@@ -1,3 +1,8 @@
+# 8.1.3
+* **Updated** `ember-frost-notifier` to `^4.0.0`
+
+
+
 # 8.1.2
 * Fixed missing icon in dummy app
 
