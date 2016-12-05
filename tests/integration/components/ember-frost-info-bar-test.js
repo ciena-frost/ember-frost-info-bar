@@ -40,7 +40,7 @@ describeComponent(
             (component 'frost-button'
               hook='create'
               isVisible=isControlsVisible
-              icon='infobar-create'
+              icon='add'
               text='Click me!'
             )
           )

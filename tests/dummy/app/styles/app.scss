@@ -11,6 +11,12 @@ $hljs-number-text-color: #c7894f;
 $hljs-tag-name-text-color: #d95360;
 $hljs-tag-attribute-text-color: #c7894f;
 
+svg {
+  &.frost-icon-frost-add {
+    color: $frost-color-blue-1;
+  }
+}
+
 .dummy-notification-container {
   position: fixed;
   top: 60px;
