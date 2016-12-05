@@ -63,7 +63,7 @@ ember install ember-frost-info-bar
   controls=(array
     (component 'frost-button'
       isVisible=isControlsVisible
-      icon='infobar-create'
+      icon='add'
       text='Click me!'
       onClick=(action 'triggerAction')
     )
