@@ -1,3 +1,6 @@
+# 8.1.4
+* **Fixed** missing icon on demo application
+
 # 8.1.3
 * **Updated** `ember-frost-notifier` to `^4.0.0`
 
