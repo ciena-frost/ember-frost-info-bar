@@ -23,6 +23,7 @@ describeComponent(
       this.render(hbs`
         {{frost-info-bar hook='my-info-bar'
           icon=(component 'frost-icon'
+            hook='baconIcon'
             icon='bacon'
             pack='dummy'
           )
@@ -62,7 +63,7 @@ describeComponent(
       expect(
         this.$($hook('info-bar')).hasClass('frost-info-bar'),
         'default hook exists'
-      ).to.be.true
+      ).to.equal(true)
     })
 
     describe('Icon section', function () {
@@ -100,7 +101,7 @@ describeComponent(
         expect(
           this.$($hook('info-bar-icon')).hasClass('frost-info-bar-icon'),
           'icon hook is set'
-        ).to.be.true
+        ).to.equal(true)
 
         unregisterMockComponent(this)
       })
@@ -117,7 +118,7 @@ describeComponent(
         expect(
           this.$($hook('info-bar-title')).hasClass('primary-title'),
           'title hook is set'
-        ).to.be.true
+        ).to.equal(true)
       })
 
       it('renders the title component if one is passed in', function () {
@@ -162,7 +163,7 @@ describeComponent(
           expect(
             this.$($hook('info-bar-summary')).hasClass('sub-title'),
             'summary hook is set'
-          ).to.be.true
+          ).to.equal(true)
 
           unregisterMockComponent(this)
         })
@@ -211,7 +212,7 @@ describeComponent(
         expect(
           this.$($hook('info-bar-scope')).hasClass('scope'),
           'scope hook is set'
-        ).to.be.true
+        ).to.equal(true)
 
         unregisterMockComponent(this)
       })
@@ -247,7 +248,7 @@ describeComponent(
         expect(
           this.$($hook('info-bar-controls')).hasClass('controls'),
           'controls hook is set'
-        ).to.be.true
+        ).to.equal(true)
 
         unregisterMockComponent(this)
       })

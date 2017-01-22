@@ -1,6 +1,6 @@
 import Ember from 'ember'
 const {
-  Logger: {
+  Helper, Logger: {
     error
   }
 } = Ember
@@ -12,4 +12,4 @@ export function typeOf (params/*, hash*/) {
   return typeof tester === type
 }
 
-export default Ember.Helper.helper(typeOf)
+export default Helper.helper(typeOf)

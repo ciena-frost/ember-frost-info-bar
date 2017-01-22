@@ -44,6 +44,7 @@ ember install ember-frost-info-bar
 ```handlebars
 {{frost-info-bar
   icon=(component 'frost-icon'
+    hook='baconIcon'
     isVisible=isIconVisible
     icon='bacon'
     pack='dummy'
