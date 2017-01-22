@@ -4,6 +4,7 @@
 
 module.exports = {
   name: 'ember-frost-info-bar',
+
   init: function (app) {
     this.options = this.options || {}
     this.options.babel = this.options.babel || {}
@@ -12,6 +13,9 @@ module.exports = {
     if (this.options.babel.optional.indexOf('es7.decorators') === -1) {
       this.options.babel.optional.push('es7.decorators')
     }
+
+     /* eslint-disable no-unused-expressions */
     this._super.init && this._super.init.apply(this, arguments)
+    /* eslint-enable no-unused-expressions */
   }
 }

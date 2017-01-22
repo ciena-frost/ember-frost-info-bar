@@ -1,8 +1,8 @@
 const expect = chai.expect
 
 import {describeComponent} from 'ember-mocha'
-import {beforeEach, it} from 'mocha'
 import PropTypeMixin from 'ember-prop-types'
+import {beforeEach, it} from 'mocha'
 
 describeComponent(
   'frost-info-bar',
@@ -32,7 +32,7 @@ describeComponent(
       expect(
         PropTypeMixin.detect(component),
         'PropTypeMixin Mixin is present'
-      ).to.be.true
+      ).to.equal(true)
     })
   }
 )

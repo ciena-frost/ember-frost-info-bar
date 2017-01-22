@@ -2,10 +2,10 @@ import Ember from 'ember'
 
 const {
   Controller,
+  get,
   inject: {
     service
-  },
-  get
+  }
 } = Ember
 // BEGIN-SNIPPET controller
 export default Controller.extend({
