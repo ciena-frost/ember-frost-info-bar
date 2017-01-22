@@ -1,13 +1,14 @@
 import Ember from 'ember'
-const {
-  Component,
-  assign,
-  getOwner
-} = Ember
+const {Component, getOwner} = Ember
 
 export function registerMockComponent (context, name = 'mock-component', opts = {}) {
   const owner = getOwner(context)
-  const options = assign({tagName: 'dummy'}, opts)
+  const options = {tagName: 'dummy'}
+
+  Object.keys(opts).forEach((key) => {
+    options[key] = opts[key]
+  })
+
   const mockComponent = Component.extend(options)
 
   unregisterMockComponent(context)
