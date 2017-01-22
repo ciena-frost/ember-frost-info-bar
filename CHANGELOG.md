@@ -1,3 +1,10 @@
+# 8.2.0
+
+* **Added** additional builds to CI to make sure addon works with latest versions of Ember.
+* **Removed** files from npm package that aren't necessary (all of the various config files).
+* **Updated** dependencies to latest versions.
+
+
 # 8.1.4
 * **Fixed** missing icon on demo application
 
