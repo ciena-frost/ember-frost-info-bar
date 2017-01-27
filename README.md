@@ -43,6 +43,7 @@ ember install ember-frost-info-bar
 ### Template
 ```handlebars
 {{frost-info-bar
+  hook='info-bar'
   icon=(component 'frost-icon'
     hook='baconIcon'
     isVisible=isIconVisible

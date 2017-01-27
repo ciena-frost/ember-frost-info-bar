@@ -57,7 +57,7 @@ describeComponent(
 
     it('has a default hook name', function () {
       this.render(hbs`
-        {{frost-info-bar}}
+        {{frost-info-bar hook='info-bar'}}
       `)
 
       expect(
@@ -72,6 +72,7 @@ describeComponent(
 
         this.render(hbs`
         {{frost-info-bar
+          hook='info-bar'
           icon=(component 'mock-icon' class='mock-icon')
         }}
       `)
@@ -94,6 +95,7 @@ describeComponent(
 
         this.render(hbs`
         {{frost-info-bar
+          hook='info-bar'
           icon=(component 'mock-icon')
         }}
       `)
@@ -111,6 +113,7 @@ describeComponent(
       it('sets the title hook', function () {
         this.render(hbs`
           {{frost-info-bar
+            hook='info-bar'
             title='My Test Title'
           }}
         `)
@@ -126,6 +129,7 @@ describeComponent(
 
         this.render(hbs`
           {{frost-info-bar
+            hook='info-bar'
             title=(component 'mock-title' class='mock-title')
           }}
         `)
@@ -141,6 +145,7 @@ describeComponent(
       it('renders the text if it is passed in', function () {
         this.render(hbs`
           {{frost-info-bar
+            hook='info-bar'
             title='My Test Title'
           }}
         `)
@@ -156,6 +161,7 @@ describeComponent(
           registerMockComponent(this, 'mock-summary')
           this.render(hbs`
             {{frost-info-bar
+              hook='info-bar'
               summary=(component 'mock-summary')
             }}
           `)
@@ -173,6 +179,7 @@ describeComponent(
 
           this.render(hbs`
             {{frost-info-bar
+              hook='info-bar'
               summary=(component 'mock-summary' class='mock-summary')
             }}
           `)
@@ -188,6 +195,7 @@ describeComponent(
         it('renders the text if it is passed in', function () {
           this.render(hbs`
             {{frost-info-bar
+              hook='info-bar'
               summary='My Test Summary'
             }}
           `)
@@ -205,12 +213,13 @@ describeComponent(
         registerMockComponent(this, 'mock-scope')
         this.render(hbs`
           {{frost-info-bar
+            hook='info-bar'
             scope=(component 'mock-scope')
           }}
         `)
 
         expect(
-          this.$($hook('info-bar-scope')).hasClass('scope'),
+          this.$($hook('info-bar-scope')).hasClass('frost-info-bar-scope'),
           'scope hook is set'
         ).to.equal(true)
 
@@ -222,6 +231,7 @@ describeComponent(
 
         this.render(hbs`
           {{frost-info-bar
+            hook='info-bar'
             scope=(component 'mock-scope' class='mock-scope')
           }}
         `)
@@ -241,12 +251,13 @@ describeComponent(
 
         this.render(hbs`
           {{frost-info-bar
+            hook='info-bar'
             controls=(array (component 'mock-control'))
           }}
         `)
 
         expect(
-          this.$($hook('info-bar-controls')).hasClass('controls'),
+          this.$($hook('info-bar-controls')).hasClass('frost-info-bar-controls'),
           'controls hook is set'
         ).to.equal(true)
 
@@ -258,6 +269,7 @@ describeComponent(
 
         this.render(hbs`
           {{frost-info-bar
+            hook='info-bar'
             controls=(array (component 'mock-control' class='mock-control'))
           }}
         `)

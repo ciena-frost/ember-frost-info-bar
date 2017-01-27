@@ -14,7 +14,9 @@ describeComponent(
     let component
 
     beforeEach(function () {
-      component = this.subject()
+      component = this.subject({
+        hook: 'info-bar'
+      })
     })
 
     it('includes className frost-info-bar', function () {

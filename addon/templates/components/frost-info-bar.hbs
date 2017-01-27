@@ -27,14 +27,14 @@
 </div>
 <!-- Controls -->
 {{#if scope}}
-    <div class='scope' data-test={{hook (concat hook '-scope')}}>
+    <div class='frost-info-bar-scope' data-test={{hook (concat hook '-scope')}}>
       {{component scope}}
     </div>
 {{/if}}
 
 <!-- Actions -->
 {{#if controls}}
-  <div class='controls' data-test={{hook (concat hook '-controls')}}>
+  <div class='frost-info-bar-controls' data-test={{hook (concat hook '-controls')}}>
     {{#each controls as |control|}}
       {{component control
         design='info-bar'
