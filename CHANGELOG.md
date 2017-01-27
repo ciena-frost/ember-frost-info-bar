@@ -1,3 +1,9 @@
+# 8.3.0
+
+* **Updated** class names to use prefix `frost-info-bar-` so they don't have collisions with other components not using scoped class names.
+* **Updated** component to extend component from `ember-frost-core` so we have standard hook and spread support for a Frost component.
+
+
 # 8.2.1
 
 * **Upgraded** to test against Ember 2.11.
