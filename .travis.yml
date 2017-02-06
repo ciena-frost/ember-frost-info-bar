@@ -2,17 +2,20 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-- '6.9'
-- 'stable'
+  - '6.9'
+  - 'stable'
 branches:
   except:
-  - "/^v[0-9\\.]+/"
+    - /^v[0-9\.]+/
 addons:
   apt:
     sources:
-    - ubuntu-toolchain-r-test
+      - google-chrome
+      - ubuntu-toolchain-r-test
     packages:
-    - g++-4.8
+      - google-chrome-stable
+      - g++-4.8
+  firefox: 'latest-esr'
 env:
   matrix:
     - EMBER_TRY_SCENARIO=ember-2-3
