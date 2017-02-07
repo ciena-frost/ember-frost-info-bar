@@ -1,40 +1,37 @@
 const expect = chai.expect
 
-import {describeComponent} from 'ember-mocha'
 import PropTypeMixin from 'ember-prop-types'
-import {beforeEach, it} from 'mocha'
+import {beforeEach, describe, it} from 'mocha'
 
-describeComponent(
-  'frost-info-bar',
-  'FrostInfoBarComponent',
-  {
-    unit: true
-  },
-  function () {
-    let component
+import {unit} from 'dummy/tests/helpers/ember-test-utils/setup-component-test'
 
-    beforeEach(function () {
-      component = this.subject({
-        hook: 'info-bar'
-      })
+const test = unit('frost-info-bar')
+describe(test.label, function () {
+  test.setup()
+
+  let component
+
+  beforeEach(function () {
+    component = this.subject({
+      hook: 'info-bar'
     })
+  })
 
-    it('includes className frost-info-bar', function () {
-      expect(component.classNames).to.include('frost-info-bar')
-    })
+  it('includes className frost-info-bar', function () {
+    expect(component.classNames).to.include('frost-info-bar')
+  })
 
-    it('sets hook to a default', function () {
-      expect(
-        component.get('hook'),
-        'hook is set to a default'
-      ).to.eql('info-bar')
-    })
+  it('sets hook to a default', function () {
+    expect(
+      component.get('hook'),
+      'hook is set to a default'
+    ).to.eql('info-bar')
+  })
 
-    it('has the expected Mixins', function () {
-      expect(
-        PropTypeMixin.detect(component),
-        'PropTypeMixin Mixin is present'
-      ).to.equal(true)
-    })
-  }
-)
+  it('has the expected Mixins', function () {
+    expect(
+      PropTypeMixin.detect(component),
+      'PropTypeMixin Mixin is present'
+    ).to.equal(true)
+  })
+})
