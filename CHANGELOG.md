@@ -1,3 +1,8 @@
+# 8.3.1
+* **Updated** integration/unit tests to remove the deprecated use of `describeComponent()`
+
+
+
 # 8.3.0
 
 * **Updated** class names to use prefix `frost-info-bar-` so they don't have collisions with other components not using scoped class names.
