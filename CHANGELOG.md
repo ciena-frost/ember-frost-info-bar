@@ -1,3 +1,11 @@
+# 8.3.2
+
+* **Updated** Travis to test Chrome as well as Firefox.
+* **Updated** testem to use custom reporter from `ember-test-utils`.
+* **Updated** Travis to only publish when git tags are added in preparation for non-version bump pull requests.
+* **Updated** linting to use linting tools from `ember-test-utils`.
+
+
 # 8.3.1
 * **Updated** integration/unit tests to remove the deprecated use of `describeComponent()`
 
