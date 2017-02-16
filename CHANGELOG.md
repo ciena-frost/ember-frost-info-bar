@@ -13,8 +13,10 @@
 
 # 8.3.0
 
-* **Updated** class names to use prefix `frost-info-bar-` so they don't have collisions with other components not using scoped class names.
-* **Updated** component to extend component from `ember-frost-core` so we have standard hook and spread support for a Frost component.
+* **Updated** class names to use prefix `frost-info-bar-` so they don't have collisions with other
+components not using scoped class names.
+* **Updated** component to extend component from `ember-frost-core` so we have standard hook and
+spread support for a Frost component.
 
 
 # 8.2.1
@@ -51,7 +53,8 @@
 
 
 # 8.0.0
-Updated Dependencies to use version ^1.0.0 of ember-frost-core. None of the existing functionality was broken so further modification was not required. 
+Updated Dependencies to use version ^1.0.0 of ember-frost-core. None of the existing functionality
+was broken so further modification was not required.
 
 
 # 7.0.2
@@ -101,7 +104,8 @@ Use a `# CHANGELOG` section in your Pull Request description to auto-populate th
 # 3.1.1
 
 * **Updated** `ember-hook` dependency in blueprint to latest version
-* **Removed** unneeded configuration object for `ember-hook` since it will now work correctly in the development environment.
+* **Removed** unneeded configuration object for `ember-hook` since it will now work correctly
+in the development environment.
 
 <!-- Reviewable:start -->
 ---
