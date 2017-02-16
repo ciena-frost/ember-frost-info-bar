@@ -74,7 +74,8 @@ ember install ember-frost-info-bar
 ```
 
 ## Testing with ember-hook
-The info-bar component is accessible using ember-hook with the top level hook name or you can access the internal components as well -
+The info-bar component is accessible using ember-hook with the top level hook name or you can
+access the internal components as well -
 * Default top level hook - `$hook('info-bar')`
 * Icon slot hook - `$hook('<hook-name>-icon')`
 * Title slot hook - `$hook('<hook-name>-title')`
