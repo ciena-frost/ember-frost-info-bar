@@ -1,3 +1,6 @@
+# 8.3.3
+* **Updated** the travis scripts used for bumping and publishing
+
 # 8.3.2
 
 * **Updated** Travis to test Chrome as well as Firefox.
