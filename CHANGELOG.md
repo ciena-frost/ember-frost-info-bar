@@ -1,3 +1,6 @@
+# 8.3.4 (2017-03-23)
+* **Fixed** `ember` and `ember-cli` dependencies
+
 # 8.3.3
 * **Updated** the travis scripts used for bumping and publishing
 
