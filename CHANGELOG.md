@@ -1,3 +1,6 @@
+# 8.3.5 (2017-04-21)
+* **Added** blueprint check
+
 # 8.3.4 (2017-03-23)
 * **Fixed** `ember` and `ember-cli` dependencies
 
