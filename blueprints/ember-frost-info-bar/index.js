@@ -3,9 +3,7 @@ const blueprintHelper = require('ember-frost-core/blueprint-helper')
 module.exports = {
   afterInstall: function (options) {
     const addonsToAdd = [
-      {name: 'ember-computed-decorators', target: '~0.3.0'},
-      {name: 'ember-frost-core', target: '^1.14.3'},
-      {name: 'ember-hook', target: '^1.3.1'}
+      {name: 'ember-frost-core', target: '^1.14.3'}
     ]
 
     // Get the packages installed in the consumer app/addon. Packages that are already installed in the consumer within
