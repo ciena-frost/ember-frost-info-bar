@@ -1,3 +1,7 @@
+# 8.3.6 (2017-05-10)
+* **Updated** the secure auth tokens in `.travis.yml`
+
+
 # 8.3.5 (2017-04-21)
 * **Added** blueprint check
 
