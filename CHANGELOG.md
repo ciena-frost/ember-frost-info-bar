@@ -1,3 +1,7 @@
+# 8.3.7 (2017-05-23)
+* Fix https://github.com/ciena-frost/ember-frost-info-bar/issues/69
+  * Specify min-height for info-bar to prevent firefox from ignoring height
+
 # 8.3.6 (2017-05-10)
 * **Updated** the secure auth tokens in `.travis.yml`
 
