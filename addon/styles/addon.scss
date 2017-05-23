@@ -11,6 +11,7 @@ $info-bar-title-separator: 5px;
   flex-direction: row;
   align-items: center;
   height: $info-bar-height;
+  min-height: $info-bar-height;
   padding: $info-bar-padding-top-bottom $info-bar-padding-right $info-bar-padding-top-bottom $info-bar-padding-left;
   border-bottom: $info-bar-border-width solid $frost-color-lgrey-1;
   background-color: $frost-color-white;
