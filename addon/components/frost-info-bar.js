@@ -5,5 +5,6 @@ export default Component.extend({
   // == Properties ============================================================
 
   classNames: ['frost-info-bar'],
-  layout
+  layout,
+  hook: 'info-bar'
 })
