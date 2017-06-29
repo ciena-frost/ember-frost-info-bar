@@ -1,5 +1,4 @@
-const expect = chai.expect
-
+import {expect} from 'chai'
 import PropTypeMixin from 'ember-prop-types'
 import {beforeEach, describe, it} from 'mocha'
 
