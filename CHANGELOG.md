@@ -1,3 +1,7 @@
+# 8.3.8 (2017-07-05)
+* Upgrade `ember-cli` to `2.12.3`
+
+
 # 8.3.7 (2017-05-23)
 * Fix https://github.com/ciena-frost/ember-frost-info-bar/issues/69
   * Specify min-height for info-bar to prevent firefox from ignoring height
