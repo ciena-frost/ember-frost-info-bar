@@ -19,7 +19,7 @@ module.exports = {
       this.options.babel.plugins.push('transform-class-properties')
     }
 
-     /* eslint-disable no-unused-expressions */
+    /* eslint-disable no-unused-expressions */
     this._super.init && this._super.init.apply(this, arguments)
     /* eslint-enable no-unused-expressions */
   }

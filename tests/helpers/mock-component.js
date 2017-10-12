@@ -1,5 +1,5 @@
-import Ember from 'ember'
-const {Component, getOwner} = Ember
+import Component from '@ember/component'
+import {getOwner} from '@ember/application'
 
 export function registerMockComponent (context, name = 'mock-component', opts = {}) {
   const owner = getOwner(context)
