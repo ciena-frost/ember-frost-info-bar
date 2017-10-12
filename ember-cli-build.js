@@ -8,7 +8,6 @@ module.exports = function (defaults) {
       useLintTree: false
     },
     babel: {
-      optional: ['es7.decorators'],
       ignore: ['node_modules/**/*.js', 'bower_components/**/*.js']
     },
     snippetSearchPaths: ['tests/dummy/app']
