@@ -1,6 +1,7 @@
-import Ember from 'ember'
 import layout from './template'
-import computed, {readOnly} from 'ember-computed-decorators'
+import Ember from 'ember'
+import {computed, readOnly} from 'ember-decorators/object'
+
 const {
   Component,
   String: {
