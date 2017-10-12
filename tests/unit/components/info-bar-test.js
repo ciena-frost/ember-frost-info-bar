@@ -1,8 +1,7 @@
 import {expect} from 'chai'
 import PropTypeMixin from 'ember-prop-types'
+import {unit} from 'ember-test-utils/test-support/setup-component-test'
 import {beforeEach, describe, it} from 'mocha'
-
-import {unit} from 'dummy/tests/helpers/ember-test-utils/setup-component-test'
 
 const test = unit('frost-info-bar')
 describe(test.label, function () {

@@ -1,10 +1,9 @@
 import {expect} from 'chai'
 import {$hook, initialize} from 'ember-hook'
+import {registerMockComponent, unregisterMockComponent} from 'ember-test-utils/test-support/mock-component'
+import {integration} from 'ember-test-utils/test-support/setup-component-test'
 import hbs from 'htmlbars-inline-precompile'
 import {beforeEach, describe, it} from 'mocha'
-import {registerMockComponent, unregisterMockComponent} from '../../helpers/mock-component'
-
-import {integration} from 'dummy/tests/helpers/ember-test-utils/setup-component-test'
 
 const test = integration('ember-frost-info-bar')
 describe(test.label, function () {
