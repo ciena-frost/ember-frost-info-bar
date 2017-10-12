@@ -14,42 +14,6 @@ describe(test.label, function () {
     initialize()
   })
 
-  it('renders', function (done) {
-    this.render(hbs`
-      {{frost-info-bar hook='my-info-bar'
-        icon=(component 'frost-icon'
-          hook='baconIcon'
-          icon='bacon'
-          pack='dummy'
-        )
-        title=(component 'text-box'
-          text='&lt;placeholder: title&gt;'
-        )
-        summary=(component 'text-box'
-          isVisible=summary
-          text='&lt;placeholder: summary&gt;'
-        )
-        scope=(component 'text-box'
-          text='&lt;placeholder: scope&gt;'
-        )
-        controls=(array
-          (component 'frost-button'
-            hook='create'
-            isVisible=isControlsVisible
-            icon='add'
-            text='Click me!'
-          )
-        )
-      }}
-    `)
-
-    const el = $hook('my-info-bar')
-    return capture('frost-info-bar', done, {
-      targetElement: el[0],
-      experimentalSvgs: true
-    })
-  })
-
   it('has a default hook name', function () {
     this.render(hbs`
       {{frost-info-bar hook='info-bar'}}
