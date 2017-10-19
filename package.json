@@ -45,7 +45,7 @@
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-elsewhere": "1.0.2",
     "ember-export-application-global": "^2.0.0",
-    "ember-frost-notifier": "git://github.com/juwara0/ember-frost-notifier#upgradeEmberCli_2-16-2",
+    "ember-frost-notifier": "^5.0.0",
     "ember-frost-test": "^2.1.2",
     "ember-hook": "^1.4.2",
     "ember-load-initializers": "^1.0.0",
