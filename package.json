@@ -71,7 +71,7 @@
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-sass": "7.0.0",
     "ember-decorators": "1.3.0",
-    "ember-frost-core": "git://github.com/juwara0/ember-frost-core#upgradeEmberCli_2-16-2"
+    "ember-frost-core": "^2.0.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
