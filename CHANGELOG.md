@@ -1,3 +1,19 @@
+# 9.0.0 (2017-10-19)
+* **Removed** bower.json and .bowerrc since no longer needed
+* **Removed** ember-cli-visual-regression
+* **Removed** unused ember-cli-notifications package
+* **Updated** to use mock-component helper from `ember-test-utils`
+* **Updated** testing dependencies
+* **Updated** version of ember-test-utils and fix linting
+* **Updated** to Ember CLI 2.16.2 and babel 6
+* **Updated** ember-computed-decorators to new version which is now ember-decorators
+* **Updated** dependencies to latest versions
+* **Updated** to imports to use new Ember Javascript Modules API syntax: https://github.com/ember-cli/ember-rfc176-data
+* **Added** eslint plugin to enforce Ember Javascript Modules API syntax usage
+* **Removed** code coverage verification until issue is resolved: https://github.com/kategengler/ember-cli-code-coverage/issues/133
+* **Updated** pr-bumper to version 3 which requires updating to use node 8.1.2
+* **Added** package-lock.json
+
 # 8.3.9 (2017-08-10)
 * Upgrade ember-cli 2.12.3 inter-dependencies
 
