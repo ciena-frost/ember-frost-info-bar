@@ -1,8 +1,10 @@
+/* eslint-env node */
+'use strict'
 module.exports = function (environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'dummy',
     podModulePrefix: 'dummy/pods',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'hash',
     EmberENV: {
@@ -15,6 +17,7 @@ module.exports = function (environment) {
         Date: false
       }
     },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

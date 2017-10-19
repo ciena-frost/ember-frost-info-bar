@@ -1,12 +1,6 @@
-import Ember from 'ember'
-
-const {
-  Controller,
-  get,
-  inject: {
-    service
-  }
-} = Ember
+import Controller from '@ember/controller'
+import {get} from '@ember/object'
+import {inject as service} from '@ember/service'
 // BEGIN-SNIPPET controller
 export default Controller.extend({
   notifier: service('notifier'),

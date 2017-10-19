@@ -1,12 +1,8 @@
-import Ember from 'ember'
+import Component from '@ember/component'
+import {htmlSafe} from '@ember/string'
 import layout from './template'
-import computed, {readOnly} from 'ember-computed-decorators'
-const {
-  Component,
-  String: {
-    htmlSafe
-  }
-} = Ember
+import {computed, readOnly} from 'ember-decorators/object'
+
 export default Component.extend({
   layout,
   @readOnly
