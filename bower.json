@@ -1,0 +1,9 @@
+{
+  "name": "ember-frost-info-bar",
+  "dependencies": {
+    "ember-mocha-adapter": "~0.3.1",
+    "sinonjs": "1.17.1",
+    "chai-jquery": "^2.0.1",
+    "sinon-chai": "^2.8.0"
+  }
+}
