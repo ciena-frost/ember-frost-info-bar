@@ -1,6 +1,6 @@
 /* eslint-env node */
 
-const Reporter = require('ember-test-utils/reporter')
+var Reporter = require('ember-test-utils/reporter')
 
 module.exports = {
   disable_watching: true,
@@ -13,16 +13,5 @@ module.exports = {
     'Chrome'
   ],
   reporter: new Reporter(),
-  test_page: 'tests/index.html?hidepassed',
-  browser_args: {
-    Chrome: {
-      mode: 'ci',
-      args: [
-        '--disable-gpu',
-        '--headless',
-        '--remote-debugging-port=9222',
-        '--window-size=1440,900'
-      ]
-    }
-  }
+  test_page: 'tests/index.html?hidepassed'
 }

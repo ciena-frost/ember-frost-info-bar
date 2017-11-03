@@ -1,9 +1,10 @@
 import {expect} from 'chai'
 import {$hook, initialize} from 'ember-hook'
-import {registerMockComponent, unregisterMockComponent} from 'ember-test-utils/test-support/mock-component'
-import {integration} from 'ember-test-utils/test-support/setup-component-test'
 import hbs from 'htmlbars-inline-precompile'
 import {beforeEach, describe, it} from 'mocha'
+import {registerMockComponent, unregisterMockComponent} from '../../helpers/mock-component'
+
+import {integration} from 'dummy/tests/helpers/ember-test-utils/setup-component-test'
 
 const test = integration('ember-frost-info-bar')
 describe(test.label, function () {
@@ -13,7 +14,7 @@ describe(test.label, function () {
     initialize()
   })
 
-  it('should have a default hook name', function () {
+  it('has a default hook name', function () {
     this.render(hbs`
       {{frost-info-bar hook='info-bar'}}
     `)
@@ -25,7 +26,7 @@ describe(test.label, function () {
   })
 
   describe('Icon section', function () {
-    it('should render the icon section when "icon" property is set', function () {
+    it('renders the icon section when "icon" property is set', function () {
       registerMockComponent(this, 'mock-icon')
 
       this.render(hbs`
@@ -48,7 +49,7 @@ describe(test.label, function () {
       unregisterMockComponent(this)
     })
 
-    it('should set the icon hook', function () {
+    it('sets the icon hook', function () {
       registerMockComponent(this, 'mock-icon')
 
       this.render(hbs`
@@ -68,7 +69,7 @@ describe(test.label, function () {
   })
 
   describe('Title section', function () {
-    it('should set the title hook', function () {
+    it('sets the title hook', function () {
       this.render(hbs`
         {{frost-info-bar
           hook='info-bar'
@@ -82,7 +83,7 @@ describe(test.label, function () {
       ).to.equal(true)
     })
 
-    it('should render the title component if one is passed in', function () {
+    it('renders the title component if one is passed in', function () {
       registerMockComponent(this, 'mock-title')
 
       this.render(hbs`
@@ -100,7 +101,7 @@ describe(test.label, function () {
       unregisterMockComponent(this)
     })
 
-    it('should render the text if it is passed in', function () {
+    it('renders the text if it is passed in', function () {
       this.render(hbs`
         {{frost-info-bar
           hook='info-bar'
@@ -115,7 +116,7 @@ describe(test.label, function () {
     })
 
     describe('Summary section', function () {
-      it('should set the summary hook', function () {
+      it('sets the summary hook', function () {
         registerMockComponent(this, 'mock-summary')
         this.render(hbs`
           {{frost-info-bar
@@ -132,7 +133,7 @@ describe(test.label, function () {
         unregisterMockComponent(this)
       })
 
-      it('should render the summary component if one is passed in', function () {
+      it('renders the summary component if one is passed in', function () {
         registerMockComponent(this, 'mock-summary')
 
         this.render(hbs`
@@ -150,7 +151,7 @@ describe(test.label, function () {
         unregisterMockComponent(this)
       })
 
-      it('should render the text if it is passed in', function () {
+      it('renders the text if it is passed in', function () {
         this.render(hbs`
           {{frost-info-bar
             hook='info-bar'
@@ -167,7 +168,7 @@ describe(test.label, function () {
   })
 
   describe('Scope section', function () {
-    it('should set the scope hook', function () {
+    it('sets the scope hook', function () {
       registerMockComponent(this, 'mock-scope')
       this.render(hbs`
         {{frost-info-bar
@@ -184,7 +185,7 @@ describe(test.label, function () {
       unregisterMockComponent(this)
     })
 
-    it('should render the scope component', function () {
+    it('renders the scope component', function () {
       registerMockComponent(this, 'mock-scope')
 
       this.render(hbs`
@@ -204,7 +205,7 @@ describe(test.label, function () {
   })
 
   describe('Actions section', function () {
-    it('should set the controls hook', function () {
+    it('sets the controls hook', function () {
       registerMockComponent(this, 'mock-control')
 
       this.render(hbs`
@@ -222,7 +223,7 @@ describe(test.label, function () {
       unregisterMockComponent(this)
     })
 
-    it('should render the control component', function () {
+    it('renders the control component', function () {
       registerMockComponent(this, 'mock-control')
 
       this.render(hbs`
