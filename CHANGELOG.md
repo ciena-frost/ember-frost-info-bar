@@ -1,3 +1,6 @@
+# 10.0.1 (2017-12-13)
+* Change semver range of `ember-resolver` to align with other repos
+
 # 10.0.0 (2017-11-03)
 
 ## WARNING: THIS REVERTS EMBER CLI 2.16.2 BACK TO 2.12.3
