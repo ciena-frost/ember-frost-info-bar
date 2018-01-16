@@ -48,7 +48,6 @@
     "ember-export-application-global": "^1.0.5",
     "ember-frost-notifier": "^7.0.0",
     "ember-frost-test": "^4.0.0",
-    "ember-hook": "1.4.2",
     "ember-load-initializers": "^0.6.0",
     "ember-prop-types": "^5.0.1",
     "ember-resolver": "^2.0.3",
@@ -68,7 +67,8 @@
     "ember-cli-babel": "^5.1.7",
     "ember-cli-htmlbars": "^1.1.1",
     "ember-cli-sass": "5.6.0",
-    "ember-frost-core": "^5.1.1"
+    "ember-frost-core": "^5.1.1",
+    "ember-hook": "1.4.2"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
