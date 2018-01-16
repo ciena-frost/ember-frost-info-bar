@@ -45,7 +45,6 @@
     "ember-code-snippet": "1.7.0",
     "ember-computed-decorators": "0.3.0",
     "ember-disable-prototype-extensions": "^1.1.0",
-    "ember-elsewhere": "1.0.1",
     "ember-export-application-global": "^1.0.5",
     "ember-frost-core": "^3.0.0",
     "ember-frost-notifier": "^7.0.0",
