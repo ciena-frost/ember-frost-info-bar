@@ -3,9 +3,6 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon')
 
 module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
-    'ember-cli-mocha': {
-      useLintTree: false
-    },
     babel: {
       optional: ['es7.decorators'],
       ignore: ['node_modules/**/*.js', 'bower_components/**/*.js']
