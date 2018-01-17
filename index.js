@@ -5,6 +5,7 @@
 module.exports = {
   name: 'ember-frost-info-bar',
 
+  /* eslint-disable complexity */
   init: function () {
     this.options = this.options || {}
     this.options.babel = this.options.babel || {}
@@ -14,8 +15,9 @@ module.exports = {
       this.options.babel.optional.push('es7.decorators')
     }
 
-     /* eslint-disable no-unused-expressions */
+    /* eslint-disable no-unused-expressions */
     this._super.init && this._super.init.apply(this, arguments)
     /* eslint-enable no-unused-expressions */
   }
+  /* eslint-enable complexity */
 }
