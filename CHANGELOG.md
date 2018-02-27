@@ -1,3 +1,32 @@
+# 12.0.0 (2018-02-27)
+* **Updated** `ember-frost-test` to `^4.0.0`
+* **Added** `chai-jquery` @ `^2.0.0`
+* **Updated** `ember-cli-chai` to `0.4.3`
+* **Updated** `ember-cli-mocha` to `0.14.4`
+* **Updated** `ember-sinon` to `^0.7.0`
+* **Updated** `ember-test-utils` to `^8.1.0`
+* **Added** `sinon-chai` @ `^2.14.0`
+* **Updated** `ember-cli-code-coverage` to `0.3.12`
+* **Updated** `ember-cli-frost-blueprints` to `^5.0.1`
+* **Updated** `ember-cli-htmlbars-inline-precompile` to `0.3.12`
+* **Added** ignore the linting of the `CHANGELOG.md`
+* **Added** ignoring of `package-lock` until we are ready to move to node 8
+* **Removed** useLintTree ember-cli-mocha configuration from `ember-cli-build.js`
+* **Removed** `.remarkrc` file since it is now provided by `ember-test-utils`
+* **Removed** the blueprint file since packages are now included via dependencies
+* **Added** `ember-browserify` @ `^1.2.0`
+* **Updated** pin `ember-code-snippet` to `1.7.0`
+* **Updated** `ember-cli-sass` to `7.1.1`
+* **Updated** `ember-computed-decorators` to `0.3.0` and left a devDependency since only used by dummy app
+* **Updated** `ember-frost-core` to `^5.1.1` and moved to a dependency instead of a devDependency
+* **Updated** `ember-hook` to `1.4.2` and moved to a dependency instead of a devDependency
+* **Updated** `ember-prop-types` to `^6.0.1` and left a devDependency since only used by dummy app
+* **Removed** unused `ember-spread` package
+* **Removed** unused `ember-concurrency` package
+* **Removed** unused `ember-elsewhere` package
+* **Updated** `ember-frost-notifier` to `^7.0.0`
+* **Updated** move code coverage config file to tests/dummy/config/ and add json-summary reporter"
+
 # 11.0.0 (2018-01-17)
 * **Updated** `ember-frost-test` to `^4.0.0`
 * **Added** `chai-jquery` @ `^2.0.0`
