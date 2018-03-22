@@ -52,7 +52,7 @@
     "ember-frost-notifier": "^8.0.0",
     "ember-frost-test": "^4.0.1",
     "ember-load-initializers": "^0.6.0",
-    "ember-prop-types": "^6.0.1",
+    "ember-prop-types": "^7.0.2",
     "ember-resolver": "^2.0.3",
     "ember-sinon": "^0.7.0",
     "ember-source": "~2.12.0",
