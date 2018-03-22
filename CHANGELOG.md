@@ -1,3 +1,19 @@
+# 13.0.0 (2018-03-22)
+* **Updated** pull request template
+* **Added** issue template
+* **Updated** to `pr-bumper` version `3`
+* **Updated** to node 8
+* **Added** slack integration
+* **Updated** `ember-frost-test` to `^4.0.1`
+* **Updated** `ember-test-utils` to `^8.1.1`
+* **Updated** `ember-cli-frost-blueprints` to `^5.0.2`
+* **Updated** `ember-prop-types` to `^7.0.1`
+* **Updated** `ember-frost-notifier` to `^8.0.0`
+* **Updated** `ember-frost-core` to `^7.0.0`
+* **Removed** ignoring of `package-lock.json` file
+* **Added** `package-lock.json` file
+* **Updated** Travis CI scripts to allow non-exact node version
+
 # 12.0.0 (2018-02-27)
 * **Changed** spacing between info bar title and sub-title
 
